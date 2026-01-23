@@ -34,6 +34,17 @@ export default function Home() {
             center.
           </p>
         </div>
+
+        <div>
+          <h1 className="font-extrabold">Testing H1 Font</h1>
+          <h2>Testing H2 Font</h2>
+          <h3>Testing H3 Font</h3>
+          <h4>Testing H4 Font</h4>
+          <h5>Testing H5 Font</h5>
+          <h6>Testing H6 Font</h6>
+          <p>This is a paragraph to test the Alegreya Sans font.</p>
+        </div>
+
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
