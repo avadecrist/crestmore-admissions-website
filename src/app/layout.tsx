@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Abhaya_Libre, Alegreya_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./ui/components/navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const abhayaLibre = Abhaya_Libre({
   variable: "--font-abhaya",
@@ -39,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${abhayaLibre.variable} ${alegreyaSans.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
