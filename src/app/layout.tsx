@@ -27,10 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${abhayaLibre.variable} ${alegreyaSans.variable} antialiased`}
-      >
+    <html lang="en" className={`${abhayaLibre.variable} ${alegreyaSans.variable} antialiased`}>
+      <body>
         <Navbar />
         {children}
       </body>
