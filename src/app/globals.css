@@ -4,9 +4,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: 0 35 102;
-  --secondary: #EDE8D0;
-  --offWhite: #F4F4F4;
-  --offBlack: #282828;
+  --secondary: 237 232 208;
+  --offWhite: 244 244 244;
+  --offBlack: 40 40 40;
   --font-heading: var(--font-abhaya);
   --font-body: var(--font-alegreya);
 }
@@ -15,9 +15,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-navy: rgb(var(--primary) / <alpha-value>);
-  --color-beige: var(--secondary);
-  --color-offwhite: var(--offWhite);
-  --color-offblack: var(--offBlack);
+  --color-beige: rgb(var(--secondary) / <alpha-value>);
+  --color-offwhite: rgb(var(--offWhite) / <alpha-value>);
+  --color-offblack: rgb(var(--offBlack) / <alpha-value>);
 
   --font-sans: var(--font-alegreya);
   --font-serif: var(--font-abhaya);
@@ -55,7 +55,6 @@ p{
 
 /* Headings (Abhaya Libre) */
 h1{
-  /* font-family: var(--font-heading); */
   font-weight: 800;
   font-size: 56px;
   line-height: 1.1;
@@ -63,7 +62,6 @@ h1{
 }
 
 h2{
-  /* font-family: var(--font-heading); */
   font-weight: 700;
   font-size: 40px;
   line-height: 1.15;
@@ -71,7 +69,6 @@ h2{
 }
 
 h3{
-  /* font-family: var(--font-heading); */
   font-weight: 600;
   font-size: 32px;
   line-height: 1.2;
@@ -79,7 +76,6 @@ h3{
 }
 
 h4{
-  /* font-family: var(--font-heading); */
   font-weight: 600;
   font-size: 24px;
   line-height: 1.3;
@@ -87,7 +83,6 @@ h4{
 }
 
 h5{
-  /* font-family: var(--font-heading); */
   font-weight: 500;
   font-size: 20px;
   line-height: 1.35;
@@ -95,7 +90,6 @@ h5{
 }
 
 h6{
-  /* font-family: var(--font-heading); */
   font-weight: 500;
   font-size: 16px;
   line-height: 1.4;

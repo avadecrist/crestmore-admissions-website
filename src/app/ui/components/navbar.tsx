@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import NavLinks from './nav-links';
+import { clsx } from 'clsx';
 
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Episodes', href: '/episodes' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-];
+// const navLinks = [
+//   { label: 'Home', href: '/' },
+//   { label: 'Episodes', href: '/episodes' },
+//   { label: 'About', href: '/about' },
+//   { label: 'Contact', href: '/contact' },
+// ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -23,15 +25,7 @@ export default function Navbar() {
 
         {/* DESKTOP NAV */}
         <div className='hidden items-center gap-6 md:flex'>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className='text-lg font-medium text-neutral-700 hover:text-neutral-950'
-            >
-              {link.label}
-            </Link>
-          ))}
+          <NavLinks />
         </div>
 
         {/* MOBILE BUTTON */}
@@ -67,37 +61,15 @@ export default function Navbar() {
       </nav>
 
     {/* MOBILE MENU */}
-    <div className={`md:hidden`}>
-        {/* should allow user to exit when clicking outside menu panel */}
-        <button
-        onClick={() => setOpen(false)}
-        aria-label='Close menu'
-        className={`fixed inset-0 z-[9998] transition-opacity duration-200 ease-out
-        ${open ? 'opacity-100 pointer-events-auto bg-black/30' : 'opacity-0 pointer-events-none'}
-        `}
-        />
-    
-        <div className={`
-            fixed right-0 top-[60px] z-[9999] w-1/3 bg-navy shadow-lg
-            transition-transform transition-opacity duration-200 ease-out
-            ${open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}
-            `}
-            >
-            {navLinks.map((link) => (
-            <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className='block w-full px-4 py-2 text-right'
-            >
-                <span className='inline-block font-serif text-sm font-medium text-white px-3 py-1.5 border border-transparent rounded-md transition-colors hover:border-white/40 active:border-white/60'
-                >
-                {link.label}
-                </span>
-            </Link>
-            ))}
+    <div
+        id="mobile-menu"
+        className={clsx('border-t bg-white md:hidden', open ? 'block' : 'hidden')}
+      >
+        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
+          <NavLinks onNavigate={() => setOpen(false)} />
         </div>
-    </div>
+      </div>
+      
     </header>
   );
 }
