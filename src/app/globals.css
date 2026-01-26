@@ -5,6 +5,8 @@
   --foreground: #171717;
   --primary: 0 35 102;
   --secondary: #EDE8D0;
+  --offWhite: #F4F4F4;
+  --offBlack: #282828;
   --font-heading: var(--font-abhaya);
   --font-body: var(--font-alegreya);
 }
@@ -14,6 +16,9 @@
   --color-foreground: var(--foreground);
   --color-navy: rgb(var(--primary) / <alpha-value>);
   --color-beige: var(--secondary);
+  --color-offwhite: var(--offWhite);
+  --color-offblack: var(--offBlack);
+
   --font-sans: var(--font-alegreya);
   --font-serif: var(--font-abhaya);
 }
@@ -24,6 +29,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+.nav-link:hover {
+  color: var(--primary);
 }
 
 body {

@@ -16,9 +16,9 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur`}>
       <nav className={`font-serif mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6`}>
-        {/* Logo / Brand */}
+        {/* Logo */}
         <Link href='/' className='text-lg font-semibold'>
-            Crestmore Podcast
+            <img src="/header-icon.png" alt="Crestmore Admissions Icon" className="h-8 w-auto"/>
         </Link>
 
         {/* DESKTOP NAV */}
