@@ -1,6 +1,8 @@
 'use client';
 import { Component } from 'react';
 import Link from 'next/link';
+import { FaSpotify } from 'react-icons/fa';
+import IconLink from '@/app/ui/socials/icon';
 
 class Footer extends Component {
   render() {
@@ -31,7 +33,12 @@ class Footer extends Component {
             <img src="/tiktok.svg" alt="TikTok Icon" className="h-6 w-6 inline-block mx-2"/>
             <img src="/tiktok.svg" alt="TikTok Icon" className="h-6 w-6 inline-block mx-2"/>
             <img src="/tiktok.svg" alt="TikTok Icon" className="h-6 w-6 inline-block mx-2"/>
-            <img src="/tiktok.svg" alt="TikTok Icon" className="h-6 w-6 inline-block mx-2"/>
+            <IconLink
+              href="/episodes"
+              icon={FaSpotify}
+              label="Spotify"
+              variant="icon"
+            />
           </div>
 
         </div>

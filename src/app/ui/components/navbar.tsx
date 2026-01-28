@@ -5,14 +5,7 @@ import { useState } from 'react';
 import NavLinks from './nav-links';
 import { clsx } from 'clsx';
 
-// const navLinks = [
-//   { label: 'Home', href: '/' },
-//   { label: 'Episodes', href: '/episodes' },
-//   { label: 'About', href: '/about' },
-//   { label: 'Contact', href: '/contact' },
-// ];
-
-export default function Navbar() {
+export default function Navbar({ onEpisodesClick }: { onEpisodesClick?: () => void }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -66,7 +59,9 @@ export default function Navbar() {
         className={clsx('border-t bg-white md:hidden', open ? 'block' : 'hidden')}
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
-          <NavLinks onNavigate={() => setOpen(false)} />
+          <NavLinks 
+          onNavigate={() => setOpen(false)} 
+          />
         </div>
       </div>
       

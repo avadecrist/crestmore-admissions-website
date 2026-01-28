@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --primary: 0 35 102;
-  --secondary: 237 232 208;
-  --offWhite: 244 244 244;
-  --offBlack: 40 40 40;
   --background: #ffffff;
   --foreground: #171717;
+  --offWhite: #f4f4f4;
+  --offBlack: #282828;
+  --primary: #002366;
+  --secondary: #EDE8D0;
   --font-heading: var(--font-abhaya);
   --font-body: var(--font-alegreya);
 }
 
 @theme inline {
-  --color-offwhite: rgb(244 244 244 / <alpha-value>);
-  --color-offblack: rgb(40 40 40 / <alpha-value>);
-  --color-navy: rgb(0 35 102 / <alpha-value>);
-  --color-beige: rgb(237 232 208 / <alpha-value>);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-offwhite: var(--offWhite);
+  --color-offblack: var(--offBlack);
+  --color-navy: var(--primary);
+  --color-beige: var(--secondary);
 
   --font-sans: var(--font-alegreya);
   --font-serif: var(--font-abhaya);
@@ -31,6 +31,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: rgb(var(--offWhite) / 1); 
