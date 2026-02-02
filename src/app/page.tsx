@@ -34,7 +34,7 @@ export default function Home() {
     <ParallaxLayer offset={0} speed={0.2}>
     
     <section className='py-10 md:py-16'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 md:flex-row md:px-6'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 md:flex-row md:gap-6 md:px-6'>
         {/* LEFT COLUMN */}
         <div className='w-full md:w-1/2 text-center'>
 
@@ -51,7 +51,8 @@ export default function Home() {
           </div>
 
         {/* Buttons */}
-          <div className='flex flex-col gap-5 text-base font-medium sm:flex-row'>
+          <div className='mt-6 flex justify-center'>
+            <div className='flex flex-col gap-4 md:flex-row md:gap-6'>
             <button
               type="button"
               onClick={scrollToEpisodes}
@@ -74,17 +75,32 @@ export default function Home() {
           </Link>
         </div>
         </div>
+        </div>
 
         {/* RIGHT COLUMN */}
-        <div className='flex w-full items-center justify-center md:w-1/2'>
-          <Image
-            src='/hero.png'
-            alt='Creators of Crestmore Admissions Sitting At a Table'
-            width={600}
-            height={600}
-            priority
-            className='w-[320px] md:w-[480px] lg:w-[600px] h-auto rounded-full shadow-2xl'
-          />
+        <div className='flex w-full items-center justify-center md:w-1/2 md:justify-end mt-10 md:mt-0'>
+          
+          <div className='relative w-[320px] sm:w-[380px] md:w-[420px]'>
+            {/* Top label */}
+            <h3 className='absolute left-1/4 top-0 -translate-x-1/2 -translate-y-full font-serif text-navy text-2xl md:text-3xl'>
+              Meet Lucy
+            </h3>
+
+            <div className='relative aspect-square w-full overflow-hidden rounded-full shadow-xl shadow-black/20'>
+              <Image
+                src='/hero.png'
+                alt='Creators of Crestmore Admissions Sitting At a Table'
+                fill
+                priority
+                className='object-cover'
+              />
+            </div>
+
+            {/* Bottom label */}
+            <h3 className='absolute right-2 bottom-0 translate-y-full font-serif text-navy text-2xl md:text-3xl'>
+              &amp; Sam
+            </h3>
+          </div>
         </div>
       </div>
     </section>
