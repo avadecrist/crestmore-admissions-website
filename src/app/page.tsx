@@ -1,47 +1,27 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Parallax, ParallaxLayer, type IParallax } from '@react-spring/parallax';
-import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Home() {
-  const parallaxRef = useRef<IParallax>(null);
   // use DOM scroll for episodes, not parallax scrollTo
   const scrollToEpisodes = () => {
     document.getElementById('episodes')?.scrollIntoView({ behavior: 'smooth' });
+    pathname === '/' && history.replaceState(null, '', '/#episodes');
   };
 
-  useEffect(() => {
-    const maybeScroll = () => {
-      if (window.location.hash === '#episodes') {
-        // wait a tick so Parallax is mounted/layout is ready
-        requestAnimationFrame(scrollToEpisodes);
-      }
-    };
-
-    maybeScroll(); // handles landing on "/#episodes"
-    window.addEventListener('hashchange', maybeScroll);
-
-    return () => window.removeEventListener('hashchange', maybeScroll);
-  }, []);
+  const pathname = usePathname();
 
   return (
   <main>
-    {/* PARALLAX HERO AREA (visual effect only, not the scroll container) */}
-    <div className="relative overflow-visible min-h-screen">
-      <Parallax ref={parallaxRef} pages={1} enabled={false}>
-
-    <ParallaxLayer offset={0} speed={0.2}>
-    
-    <section className='py-10 md:py-16'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 md:flex-row md:gap-6 md:px-6'>
+    {/* Hero Section */}
+    <section id='hero' className='py-10 md:py-20 bg-offwhite'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-12 md:flex-row md:gap-6 md:px-10'>
         {/* LEFT COLUMN */}
         <div className='w-full md:w-1/2 text-center'>
 
           <div className='mt-6'>
-            <div className='text-navy'>
-              <h1 className='text-navy'>Crestmore Admissions</h1>
-            </div>
+            <h1 className='text-navy'>Crestmore Admissions</h1>
           </div>
 
           <div className='w-full text-offblack mb-10'>
@@ -54,7 +34,7 @@ export default function Home() {
           <div className='mt-6 flex justify-center'>
             <div className='flex flex-col gap-4 md:flex-row md:gap-6'>
             <button
-              type="button"
+              type='button'
               onClick={scrollToEpisodes}
               className='flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-background transition-colors hover:bg-[#314D82] dark:hover:bg-[#ccc] md:w-[158px]'
             >
@@ -78,122 +58,45 @@ export default function Home() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className='flex w-full items-center justify-center md:w-1/2 md:justify-end mt-10 md:mt-0'>
-          
-          <div className='relative w-[320px] sm:w-[380px] md:w-[420px]'>
-            {/* Top label */}
-            <h3 className='absolute left-1/4 top-0 -translate-x-1/2 -translate-y-full font-serif text-navy text-2xl md:text-3xl'>
-              Meet Lucy
-            </h3>
+        <div className='flex w-full md:w-1/2 flex-col items-center'>
+          {/* Top label */}
+          <h2 className='mb-4 self-start md:self-center md:-translate-x-35 text-navy'>
+            Meet Lucy
+          </h2>
 
-            <div className='relative aspect-square w-full overflow-hidden rounded-full shadow-xl shadow-black/20'>
-              <Image
-                src='/hero.png'
-                alt='Creators of Crestmore Admissions Sitting At a Table'
-                fill
-                priority
-                className='object-cover'
-              />
-            </div>
-
-            {/* Bottom label */}
-            <h3 className='absolute right-2 bottom-0 translate-y-full font-serif text-navy text-2xl md:text-3xl'>
-              &amp; Sam
-            </h3>
+          <div className='relative aspect-square w-[320px] sm:w-[380px] md:w-[420px] overflow-hidden rounded-full shadow-xl shadow-black/20'> {/* relative aspect-square w-full overflow-hidden rounded-full shadow-xl shadow-black/20'> */}
+            <Image
+              src='/hero.png'
+              alt='Creators of Crestmore Admissions Sitting At a Table'                
+              fill
+              priority
+              className='object-cover'
+            />
           </div>
+
+          {/* Bottom label */}
+          <h2 className='mt-4 self-end md:self-center md:translate-x-35 text-navy'>
+            &amp; Sam
+          </h2>
         </div>
       </div>
-    </section>
-    </ParallaxLayer>
-    </Parallax>
-    </div>
+    </section>  
     
-    {/* normal page flow (no parallax) */}
-    <section id="episodes" className="scroll-mt-24 pt-10 pb-10"> 
-      {/* <div className='mx-auto max-w-7xl px-4 md:px-6'> */}
-        <h2 className="text-navy">Episodes</h2>
-        {/* Placeholder while you add episodes */}
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl border p-4">Episode Card Placeholder</div>
-            <div className="rounded-xl border p-4">Episode Card Placeholder</div>
-            <div className="rounded-xl border p-4">Episode Card Placeholder</div>
-          </div>
-        {/* </div> */}
+    {/* Episodes Section */}
+    <div className='py-10 px-20 md:py-20 px-40'>
+      <section id='episodes' className='flex flex-col items-center scroll-mt-24 pt-10 pb-10'> 
+        <div className='w-full border-b border-offblack pb-6 text-center'>
+          <h2 className='text-navy'>Episodes</h2>
+          <p className='text-navy mt-2'>New episodes will drop every Friday, beginning February 27, 2026!</p>
+        </div>
+
+        {/* Placeholder timer before adding episodes */}
+        <div className='py-15'>
+          <p> insert timer here</p>
+        </div>
       </section>
+    </div>
     
   </main> 
   );
 }
-
-
-
-// <div className='flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black'>
-    //   <main className='flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start'>
-    //     <Image
-    //       className='dark:invert'
-    //       src='/next.svg'
-    //       alt='Next.js logo'
-    //       width={100}
-    //       height={20}
-    //       priority
-    //     />
-    //     <div className='flex flex-col items-center gap-6 text-center sm:items-start sm:text-left'>
-    //       <h1 className='max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50'>
-    //         To get started, edit the page.tsx file.
-    //       </h1>
-    //       <p className='max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400'>
-    //         Looking for a starting point or more instructions? Head over to{' '}
-    //         <a
-    //           href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //           className='font-medium text-zinc-950 dark:text-zinc-50'
-    //         >
-    //           Templates
-    //         </a>{' '}
-    //         or the{' '}
-    //         <a
-    //           href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //           className='font-medium text-zinc-950 dark:text-zinc-50'
-    //         >
-    //           Learning
-    //         </a>{' '}
-    //         center.
-    //       </p>
-    //     </div>
-
-    //     <div>
-    //       <h1 className='font-extrabold'>Testing H1 Font</h1>
-    //       <h2>Testing H2 Font</h2>
-    //       <h3>Testing H3 Font</h3>
-    //       <h4>Testing H4 Font</h4>
-    //       <h5>Testing H5 Font</h5>
-    //       <h6>Testing H6 Font</h6>
-    //       <p>This is a paragraph to test the Alegreya Sans font.</p>
-    //     </div>
-
-    //     <div className='flex flex-col gap-4 text-base font-medium sm:flex-row'>
-    //       <a
-    //         className='flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]'
-    //         href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //         target='_blank'
-    //         rel='noopener noreferrer'
-    //       >
-    //         <Image
-    //           className='dark:invert'
-    //           src='/vercel.svg'
-    //           alt='Vercel logomark'
-    //           width={16}
-    //           height={16}
-    //         />
-    //         Deploy Now
-    //       </a>
-    //       <a
-    //         className='flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
-    //         href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //         target='_blank'
-    //         rel='noopener noreferrer'
-    //       >
-    //         Documentation
-    //       </a>
-    //     </div>
-    //   </main>
-    // </div>

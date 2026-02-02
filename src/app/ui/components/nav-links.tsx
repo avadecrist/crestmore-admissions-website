@@ -25,6 +25,7 @@ export default function NavLinks({ onNavigate }: NavLinksProps) {
         const isActive = pathname === link.href;
 
         const isEpisodes = link.label === 'Episodes';
+        const isHome = link.label === 'Home';
 
         return (
           <Link
@@ -40,6 +41,17 @@ export default function NavLinks({ onNavigate }: NavLinksProps) {
                 e.preventDefault();
                 router.push('/#episodes');
               }
+
+              // figure out how to scroll to hero section properly
+              // if (isHome && pathname === '/#hero') {
+              //   e.preventDefault();
+              //   router.push('/');
+              // } else if (isHome && pathname === '/') {
+              //   e.preventDefault();
+              //   router.push('/#hero');
+              // }
+              
+
             }}
             className={clsx(
               'rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100',
