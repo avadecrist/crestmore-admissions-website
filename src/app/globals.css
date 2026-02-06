@@ -38,121 +38,6 @@
 html {
   scroll-behavior: smooth;
 }
-/*
-body {
-  background: rgb(var(--offWhite) / 1); 
-  font-family: var(--font-sans), Arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), serif;
-}
-
-
-p{
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.65;
-  letter-spacing: 0.005em;
-}
-*/
-
-/* Headings (Abhaya Libre) 
-h1{
-  font-weight: 800;
-  font-size: 56px;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-}
-
-h2{
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 1.15;
-  letter-spacing: -0.005em;
-}
-
-h3{
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: 0em;
-}
-
-h4{
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.3;
-  letter-spacing: 0.005em;
-}
-
-h5{
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.35;
-  letter-spacing: 0.01em;
-}
-
-h6{
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: 0.0125em;
-}
-*/
-
-/* ========= MOBILE OVERRIDES (phones) ========= 
-@media (max-width: 480px){
-
-  p{
-    font-size: 16px;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
-  }
-
-  h1{
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 1.15;
-    letter-spacing: -0.005em;
-  }
-
-  h2{
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.2;
-    letter-spacing: 0em;
-  }
-
-  h3{
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.25;
-    letter-spacing: 0em;
-  }
-
-  h4{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.3;
-    letter-spacing: 0.005em;
-  }
-
-  h5{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.35;
-    letter-spacing: 0.01em;
-  }
-
-  h6{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.4;
-    letter-spacing: 0.0125em;
-  }
-}
-*/
 
 
  @layer base {
@@ -227,4 +112,122 @@ h6{
     h5 { font-size: 18px; }
     h6 { font-size: 15px; }
   }
+
+  /* Timeline styles */
+  /* .timeline-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 25px auto;
+  } */
+  .timeline-container {
+  position: relative;
+  }
+
+  /* vertical line */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--offBlack);
+    transform: translateX(-50%);
+  }
+
+  .timeline-event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* .timeline-date {
+    display: flex;
+    background:#314D82;
+    order: 2;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    width: 150px;
+  }
+
+  .timeline-date > span {
+    font-size: 30px;
+    margin: auto;
+    font-weight: 900;
+  } */
+   .timeline-date {
+    order: 2;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* keeps it above the line */
+  }
+
+  .timeline-date span {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    background: var(--offBlack);
+    color: var(--offWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .timeline-details {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    order: 3;
+    width: 80%;
+    border-radius: 15px;
+    padding-left: 10px;
+    background: #01b7f6;
+    margin-bottom: 3%;
+  }
+
+  /* Optional: keep sizes under control without changing global h3/p styles */
+  .timeline-details .timeline-title {
+    text-transform: uppercase;
+    margin: 0;
+    /* if your global h3 is too large, override here */
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .timeline-details .timeline-subtitle {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #1d2731;
+    font-weight: 600;
+  }
+
+  .timeline-details .timeline-desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-details,
+    .blank-box {
+      width: 40%;
+    }
+
+    .right-side .timeline-details {
+      order: 1;
+      padding-right: 10px;
+    }
+
+    .right-side .blank-box {
+      order: 3;
+    }
+  }
+
 }

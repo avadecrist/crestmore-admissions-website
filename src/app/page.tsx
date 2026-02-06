@@ -36,7 +36,7 @@ export default function Home() {
             <button
               type='button'
               onClick={scrollToEpisodes}
-              className='flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-background transition-colors hover:bg-[#314D82] dark:hover:bg-[#ccc] md:w-[158px]'
+              className='flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-background transition-all duration-200 hover:bg-[#314D82] dark:hover:bg-[#ccc] hover:scale-105 md:w-[158px]'
             >
               Listen Now
             <Image
@@ -48,7 +48,7 @@ export default function Home() {
             />
           </button>
           <Link
-            className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
+            className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-5 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
             href='/contact'
           >
             Follow Us

@@ -11,6 +11,8 @@ interface IconLinkProps {
   label?: string;
   variant?: IconLinkVariant; //variants
   size?: number;
+  bgColor?: string;
+  textColor?: string;
   className?: string;
 }
 
@@ -21,11 +23,19 @@ export default function IconLink({
   variant = 'icon',
   size = 24,
   className = '',
+  bgColor = '',
 }: IconLinkProps) {
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-2 ${className}`}
+      className={`
+        inline-flex items-center justify-center
+        rounded-lg
+        p-1
+        transition-all duration-200
+        bg-${bgColor}
+        hover:scale-105 hover:bg-${bgColor}/90 
+        ${className}`}
     >
       <Icon size={size} />
       {variant === 'labeled' && label && <span>{label}</span>}
