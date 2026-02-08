@@ -3,36 +3,25 @@ import TimelineEvent from "@/app/ui/components/timeline-events";
 export default function AboutStory() {
   const events = [
     {
-      year: 2022,
-      title: "Future University",
-      subtitle: "Advanced Degree in Technology",
+      number: 1,
+      title: "Our Idea",
       description:
         "Embarking on a journey into advanced technology studies for a brighter future.",
       rightSide: false,
     },
     {
-      year: 2020,
-      title: "Cyber Academy",
-      subtitle: "Specialization in Cybersecurity",
+      number: 2,
+      title: "Scripts",
       description:
         "Diving deep into the world of cybersecurity to combat digital threats.",
       rightSide: true,
     },
     {
-      year: 2018,
-      title: "Quantum Institute",
-      subtitle: "Exploring Quantum Computing",
+      number: 3,
+      title: "Recordings",
       description:
         "Delving into the realm of quantum computing for cutting-edge problem-solving.",
       rightSide: false,
-    },
-    {
-      year: 2012,
-      title: "Tech College",
-      subtitle: "Bachelor's Degree in Computer Science",
-      description:
-        "Commencing the journey with a solid foundation in computer science studies.",
-      rightSide: true,
     },
   ];
 
@@ -40,10 +29,9 @@ export default function AboutStory() {
     <section className="timeline-container bg-offwhite">
       {events.map((e) => (
         <TimelineEvent
-          key={`${e.year}-${e.title}`}
-          year={e.year}
+          key={`${e.number}-${e.title}`}
+          number={e.number}
           title={e.title}
-          subtitle={e.subtitle}
           description={e.description}
           rightSide={e.rightSide}
         />

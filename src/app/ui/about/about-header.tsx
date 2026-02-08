@@ -22,7 +22,7 @@ export default function AboutHeader() {
             </div>
 
             {/* Coiled phone divider */}
-            <div className='relative w-full flex flex-row items-center justify-between pt-2'>
+            <div className='relative timeline-container w-full flex flex-row items-center justify-between pt-2 pb-10'>
                 {/* LEFT Coiled phone cord image */}
                 <div className='relative translate-x-[-50%]'>
                     <Image

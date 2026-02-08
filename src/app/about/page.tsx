@@ -4,6 +4,7 @@ import { FaSpotify, FaYoutube, FaLinkedin, FaInstagram, FaTiktok } from 'react-i
 import IconLink from '@/app/ui/socials/icon';
 import AboutHeader from '../ui/about/about-header';
 import AboutStory from '../ui/about/about-story';
+import AboutCreators from '../ui/about/about-creators';
 
 export default function About() {
     return (
@@ -15,9 +16,8 @@ export default function About() {
         <AboutStory />
 
         {/* THE CREATORS */}
-        <section className='py-10 md:py-20 bg-offwhite'>
-            
-        </section>
+        <AboutCreators />
+        
 
     </main>
     );

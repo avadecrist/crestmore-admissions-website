@@ -1,15 +1,13 @@
 type TimelineEventProps = {
-  year: string | number;
+  number: string | number;
   title: string;
-  subtitle: string;
   description: string;
   rightSide?: boolean;
 };
 
 export default function TimelineEvent({
-  year,
+  number,
   title,
-  subtitle,
   description,
   rightSide = false,
 }: TimelineEventProps) {
@@ -18,12 +16,11 @@ export default function TimelineEvent({
       <div className="blank-box" />
 
       <div className="timeline-date">
-        <span>{year}</span>
+        <span>{number}</span>
       </div>
 
       <div className="timeline-details">
         <h2 className="time-title">{title}</h2>
-        <h3 className="time-subtitle">{subtitle}</h3>
         <p className="time-description">{description}</p>
       </div>
     </div>
