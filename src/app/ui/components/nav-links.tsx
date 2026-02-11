@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
 const navLinks = [
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '/#hero' },
   { label: 'Episodes', href: '/#episodes' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -41,16 +41,17 @@ export default function NavLinks({ onNavigate }: NavLinksProps) {
                 e.preventDefault();
                 router.push('/#episodes');
               }
-
-              // figure out how to scroll to hero section properly
-              // if (isHome && pathname === '/#hero') {
-              //   e.preventDefault();
-              //   router.push('/');
-              // } else if (isHome && pathname === '/') {
-              //   e.preventDefault();
-              //   router.push('/#hero');
-              // }
-              
+            
+              if (link.label === 'Home' && pathname === '/') {
+                e.preventDefault();
+                document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+                history.replaceState(null, '', '/#hero');
+              }
+              if (link.label === 'Episodes' && pathname === '/') {
+                e.preventDefault();
+                document.getElementById('episodes')?.scrollIntoView({ behavior: 'smooth' });
+                history.replaceState(null, '', '/#episodes');
+              }
 
             }}
             className={clsx(

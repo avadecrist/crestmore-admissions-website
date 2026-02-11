@@ -2,13 +2,26 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import TimerSection from './ui/components/temp-timer-section';
+import { useEffect } from 'react';
 
 export default function Home() {
-  // use DOM scroll for episodes, not parallax scrollTo
+  // use DOM scroll for episodes and hero sections
   const scrollToEpisodes = () => {
     document.getElementById('episodes')?.scrollIntoView({ behavior: 'smooth' });
     pathname === '/' && history.replaceState(null, '', '/#episodes');
   };
+/* since Next's Link doesn't handle hash changes well when already on the page. 
+ * We also want to update the URL without a full page reload, so we use history.replaceState.
+ */
+  useEffect(() => {
+  if (window.location.hash) {
+    const id = window.location.hash.replace('#', '');
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+}, []);
 
   const pathname = usePathname();
 
@@ -32,29 +45,29 @@ export default function Home() {
 
         {/* Buttons */}
           <div className='mt-6 flex justify-center'>
-            <div className='flex flex-col gap-4 md:flex-row md:gap-6'>
-            <button
-              type='button'
-              onClick={scrollToEpisodes}
-              className='flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-background transition-all duration-200 hover:bg-[#314D82] dark:hover:bg-[#ccc] hover:scale-105 md:w-[158px]'
-            >
-              Listen Now
-            <Image
-              className='brightness-0 invert'
-              src='/play.svg'
-              alt='Play Button Icon'
-              width={24}
-              height={24}
-            />
-          </button>
-          <Link
-            className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-5 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
-            href='/contact'
-          >
-            Follow Us
-          </Link>
-        </div>
-        </div>
+            <div className='flex flex-row gap-6'>
+              <button
+                type='button'
+                onClick={scrollToEpisodes}
+                className='flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-background transition-all duration-200 hover:bg-[#314D82] dark:hover:bg-[#ccc] hover:scale-105 md:w-[158px]'
+              >
+                Listen Now
+              <Image
+                className='brightness-0 invert'
+                src='/play.svg'
+                alt='Play Button Icon'
+                width={24}
+                height={24}
+              />
+              </button>
+              <Link
+                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-5 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
+                href='/contact'
+              >
+                Follow Us
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* RIGHT COLUMN */}
@@ -83,20 +96,20 @@ export default function Home() {
     </section>  
     
     {/* Episodes Section */}
-    <div className='py-10 px-20 md:py-20 px-40'>
-      <section id='episodes' className='flex flex-col items-center scroll-mt-24 pt-10 pb-10'> 
+    <div className='py-10 md:py-20'>
+      <section id='episodes' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'> 
         <div className='w-full border-b border-offblack pb-6 text-center'>
           <h2 className='text-navy'>Episodes</h2>
           <p className='text-navy mt-2'>New episodes will drop every Friday, beginning February 27, 2026!</p>
         </div>
 
         {/* Placeholder timer before adding episodes */}
-        <div className='py-15'>
-          <p> insert timer here</p>
-        </div>
+        <TimerSection />
+
       </section>
     </div>
     
   </main> 
   );
 }
+

@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import NavLinks from './nav-links';
 import { clsx } from 'clsx';
+import CountdownTimer from './countdown-timer';
 
 export default function Navbar({ onEpisodesClick }: { onEpisodesClick?: () => void }) {
   const [open, setOpen] = useState(false);
+  // const launchDate = new Date(Date.UTC(2026, 2, 10, 17, 0, 0));
 
   return (
     <header className={`sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur`}>
@@ -15,6 +17,9 @@ export default function Navbar({ onEpisodesClick }: { onEpisodesClick?: () => vo
         <Link href='/' className='text-lg font-semibold'>
             <img src="/header-icon.png" alt="Crestmore Admissions Icon" className="h-8 w-auto"/>
         </Link>
+
+        {/* Temp Countdown Timer */}
+        
 
         {/* DESKTOP NAV */}
         <div className='hidden items-center gap-6 md:flex'>

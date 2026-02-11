@@ -18,7 +18,6 @@ export default function About() {
         {/* THE CREATORS */}
         <AboutCreators />
         
-
     </main>
     );
 }
