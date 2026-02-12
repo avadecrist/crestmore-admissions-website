@@ -2,8 +2,7 @@
 
 import Image from 'next/image';
 import IconLink from '../socials/icon';
-import { IconType } from 'react-icons';
-import { AboutIconLink } from '@/app/data/social-links';
+import { SocialMediaData } from '@/app/data/social-links';
 
 type AboutCardProps = {
   name: string;
@@ -12,7 +11,7 @@ type AboutCardProps = {
   imageAlt?: string;
   aboutTitle: string;
   paragraphs: string[];
-  iconLinks?: AboutIconLink[];
+  iconLinks?: SocialMediaData[];
   variant?: 'default' | 'swapped';
 };
 

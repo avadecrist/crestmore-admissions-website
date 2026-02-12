@@ -1,13 +1,13 @@
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaSpotify, FaYoutube, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
-export type AboutIconLink = {
+export type SocialMediaData = {
   href: string;
   label: string;
   icon: IconType;
 };
 
-export const chloeIconLinks: AboutIconLink[] = [
+export const chloeIconLinks: SocialMediaData[] = [
   {
     href: 'https://www.linkedin.com/in/chloeavant/',
     label: '@chloeavant',
@@ -15,7 +15,7 @@ export const chloeIconLinks: AboutIconLink[] = [
   },
 ];
 
-export const shairaIconLinks: AboutIconLink[] = [
+export const shairaIconLinks: SocialMediaData[] = [
   {
     href: 'https://www.linkedin.com/in/shairayousuf/',
     label: '@shairayousuf',
@@ -23,7 +23,7 @@ export const shairaIconLinks: AboutIconLink[] = [
   },
 ];
 
-export const ashleyIconLinks: AboutIconLink[] = [
+export const ashleyIconLinks: SocialMediaData[] = [
   {
     href: 'https://www.instagram.com/ashleyjae.uhrig?igsh=NTc4MTIwNjQ2YQ==',
     label: '@ashleyjae.uhrig',

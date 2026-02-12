@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import AboutCard from './about-cards';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+
 import {
   chloeIconLinks,
   shairaIconLinks,

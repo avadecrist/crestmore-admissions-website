@@ -35,8 +35,7 @@ export default function NavLinks({ onNavigate }: NavLinksProps) {
               // mobile menu close etc
               onNavigate?.();
 
-              // If you're already on home, Next sometimes won't "re-navigate" for hash changes
-              // so we force it.
+              // Force hash changes if already on 'Home' or 'Episodes' to trigger scrollIntoView
               if (isEpisodes && pathname === '/') {
                 e.preventDefault();
                 router.push('/#episodes');
