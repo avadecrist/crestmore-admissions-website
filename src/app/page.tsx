@@ -11,9 +11,10 @@ export default function Home() {
     document.getElementById('episodes')?.scrollIntoView({ behavior: 'smooth' });
     pathname === '/' && history.replaceState(null, '', '/#episodes');
   };
-/* since Next's Link doesn't handle hash changes well when already on the page. 
- * We also want to update the URL without a full page reload, so we use history.replaceState.
- */
+
+  /* since Next's Link doesn't handle hash changes well when already on the page. 
+   * We also want to update the URL without a full page reload, so we use history.replaceState.
+   */
   useEffect(() => {
   if (window.location.hash) {
     const id = window.location.hash.replace('#', '');
@@ -38,9 +39,9 @@ export default function Home() {
           </div>
 
           <div className='w-full text-offblack mb-10'>
-            <p>This is a description of what the Podcast <em>Crestmore Admissions</em> is about. 
-            This is a description of what the Podcast is about. This is a description of what the Podcast 
-            is about.</p>
+            <p>Working at <em>Crestmore Admissions</em> means being a punching bag for angry parents, 
+            confused freshmen, and ridiculous policies. Although it's supposed to be a mindless 
+            student job, the emotional labor is real, and it's slowly breaking them.</p>
           </div>
 
         {/* Buttons */}
@@ -49,7 +50,7 @@ export default function Home() {
               <button
                 type='button'
                 onClick={scrollToEpisodes}
-                className='flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-navy px-5 text-background transition-all duration-200 hover:bg-[#314D82] dark:hover:bg-[#ccc] hover:scale-105 md:w-[158px]'
+                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy px-6 text-background transition-all duration-200 hover:bg-[#314D82] dark:hover:bg-[#ccc] hover:scale-105 md:w-[158px]'
               >
                 Listen Now
               <Image
@@ -61,7 +62,7 @@ export default function Home() {
               />
               </button>
               <Link
-                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-5 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
+                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-6 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
                 href='/contact'
               >
                 Follow Us
@@ -97,7 +98,7 @@ export default function Home() {
     
     {/* Episodes Section */}
     <div className='py-10 md:py-20'>
-      <section id='episodes' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'> 
+      <section id='episodes' className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'> 
         <div className='w-full border-b border-offblack pb-6 text-center'>
           <h2 className='text-navy'>Episodes</h2>
           <p className='text-navy mt-2'>New episodes will drop every Friday, beginning February 27, 2026!</p>

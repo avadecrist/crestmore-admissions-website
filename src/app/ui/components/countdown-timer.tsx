@@ -21,7 +21,11 @@ export default function CountdownTimer({ expiryTimestamp }: CountdownTimerProps)
 
   return (
     <div className="relative flex z-10 gap-6 items-top group cursor-pointer">
-        <FaPhone className="mt-3 ring-icon text-offblack text-2xl transition-transform duration-200" />
+      <div className="relative inline-flex justify-center items-start">
+          <span className="big-wave big-wave--1 text-navy" aria-hidden="true" />
+          <span className="big-wave big-wave--2 text-navy" aria-hidden="true" />
+          <FaPhone className="mt-3 ring-icon text-offblack text-2xl transition-transform duration-200" />
+      </div>
         <TimeBlock label="Days" value={days} />
         <TimeBlock label="Hours" value={hours} />
         <TimeBlock label="Minutes" value={minutes} />

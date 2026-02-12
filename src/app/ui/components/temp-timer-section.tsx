@@ -5,18 +5,13 @@ export default function TimerSection() {
 
   return (
     
-    <section className="py-20 flex flex-col items-center relative">
-        <h2 className="font-sans text-black w-full md:w-2/3 text-center pb-8 leading-tight tracking-tight">
+    <section className="py-20 px-6 flex flex-col items-center relative">
+        <h3 className="text-black w-full md:w-2/3 text-center pb-8 leading-tight tracking-tight">
         CRESTMORE ADMISSIONS EPISODE 1 IS RELEASED IN
-        </h2>
+        </h3>
 
-        {/* wave for pulse animation */}
-        <div className="relative inline-flex justify-center items-start">
-            <span className="big-wave big-wave--1 text-navy" aria-hidden="true" />
-            <span className="big-wave big-wave--2 text-navy" aria-hidden="true" />
-
-            <CountdownTimer expiryTimestamp={launchDate} />
-        </div>
+        <CountdownTimer expiryTimestamp={launchDate} />
+        
     </section>
   );
 }
