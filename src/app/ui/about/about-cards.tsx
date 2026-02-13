@@ -63,7 +63,7 @@ export default function AboutCard({
                         <IconLink
                             key={link.href}
                             href={link.href}
-                            icon={link.icon}
+                            iconKey={link.iconKey}
                             label={link.label}
                             variant="labeled"
                             className="text-beige"

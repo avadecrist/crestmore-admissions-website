@@ -2,10 +2,10 @@ import Image from 'next/image';
 import EmbeddedSection from '../ui/components/embedded-section';
 
 import { //for testing
-  chloeIconLinks,
-  shairaIconLinks,
-  ashleyIconLinks,
+  instaIconLinks,
+  tiktokIconLinks,
 } from '@/app/data/social-links';
+import SocialEmbedFrame from '../ui/components/social-embed';
 
 export default function Contact() {
     return (
@@ -36,21 +36,31 @@ export default function Contact() {
                 <div className='w-full py-20'>
                     {/* Headers */}
                     <h2 className='text-offblack text-center mb-20'>Stay in the Loop!</h2>
-                    <h3 className='text-navy text-center mb-10'>Follow Us on Social Media</h3>
+                    <h3 className='text-navy text-center mb-5'>Follow Us on Social Media</h3>
 
                     {/* Social Media Info */}
                     <div className='flex flex-col items-center gap-6 md:flex-row md:justify-center'>
                         <EmbeddedSection
                             title="Shaira"
-                            iconLinks={shairaIconLinks}
+                            iconLinks={instaIconLinks}
                             embeddedContent={
-                              <div className="aspect-video w-full">
-                                <iframe
-                                className="h-full w-full"
-                                src="https://www.instagram.com/crestmoreadmissions?igsh=NTc4MTIwNjQ2YQ=="
-                                loading="lazy"
-                                />
-                              </div>
+                              <SocialEmbedFrame
+                                src="https://www.instagram.com/p/C30iJSaPSdg/embed"
+                                title="Instagram post"
+                                aspect="4/5"
+                              />
+                            }
+                        />
+
+                        <EmbeddedSection
+                            title="Tiktok"
+                            iconLinks={tiktokIconLinks}
+                            embeddedContent={
+                              <SocialEmbedFrame
+                                src="https://www.tiktok.com/embed/@crestmoreadmissions"
+                                title="TikTok video"
+                                aspect="4/5"
+                              />
                             }
                         />
                     </div>

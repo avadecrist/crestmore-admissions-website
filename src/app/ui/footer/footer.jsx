@@ -1,8 +1,8 @@
 'use client';
 import { Component } from 'react';
 import Link from 'next/link';
-import { FaSpotify, FaYoutube, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 import IconLink from '@/app/ui/socials/icon';
+import { spotifyIconLinks, youtubeIconLinks, instaIconLinks, tiktokIconLinks } from '@/app/data/social-links';
 
 class Footer extends Component {
   render() {
@@ -30,38 +30,46 @@ class Footer extends Component {
             {/* Social Media Icons */}
             <div className='text-right flex flex-row gap-4 justify-end items-center mt-3'>
               {/* Linked Icon components */}
-              <IconLink
-                href='/episodes'
-                icon={FaInstagram}
-                label='Instagram'
-                variant='icon'
-                bgColor='navy'
-                className='text-beige'
-              />
-              <IconLink
-                href='/episodes'
-                icon={FaTiktok}
-                label='TikTok'
-                variant='icon'
-                bgColor='navy'
-                className='text-beige'
-              />
-              <IconLink
-                href='/episodes'
-                icon={FaSpotify}
-                label='Spotify'
-                variant='icon'
-                bgColor='navy'
-                className='text-beige'
-              />
-              <IconLink
-                href='/episodes'
-                icon={FaYoutube}
-                label='YouTube'
-                variant='icon'
-                bgColor='navy'
-                className='text-beige'
-              />
+              {spotifyIconLinks.map((link) => (
+                <IconLink
+                  key={link.href}
+                  href={link.href}
+                  iconKey={link.iconKey}
+                  label={link.label}
+                  variant="icon"
+                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                />
+              ))}
+              {youtubeIconLinks.map((link) => (
+                <IconLink
+                  key={link.href}
+                  href={link.href}
+                  iconKey={link.iconKey}
+                  label={link.label}
+                  variant="icon"
+                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                />
+              ))}
+              {instaIconLinks.map((link) => (
+                <IconLink
+                  key={link.href}
+                  href={link.href}
+                  iconKey={link.iconKey}
+                  label={link.label}
+                  variant="icon"
+                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                />
+              ))}
+              {tiktokIconLinks.map((link) => (
+                <IconLink
+                  key={link.href}
+                  href={link.href}
+                  iconKey={link.iconKey}
+                  label={link.label}
+                  variant="icon"
+                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                />
+              ))}
           </div>
 
         </div>

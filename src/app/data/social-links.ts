@@ -1,17 +1,20 @@
 import { FaSpotify, FaYoutube, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { IconType } from 'react-icons';
+// Want to eventually incorporate data for Spotify, YouTube, TikTok, etc.
+
+export type SocialIconKey = 'linkedin' | 'instagram' | 'tiktok' | 'youtube' | 'spotify';
 
 export type SocialMediaData = {
   href: string;
   label: string;
-  icon: IconType;
+  iconKey: SocialIconKey;
 };
 
 export const chloeIconLinks: SocialMediaData[] = [
   {
     href: 'https://www.linkedin.com/in/chloeavant/',
     label: '@chloeavant',
-    icon: FaLinkedin,
+    iconKey: 'linkedin',
   },
 ];
 
@@ -19,7 +22,7 @@ export const shairaIconLinks: SocialMediaData[] = [
   {
     href: 'https://www.linkedin.com/in/shairayousuf/',
     label: '@shairayousuf',
-    icon: FaLinkedin,
+    iconKey: 'linkedin',
   },
 ];
 
@@ -27,6 +30,38 @@ export const ashleyIconLinks: SocialMediaData[] = [
   {
     href: 'https://www.instagram.com/ashleyjae.uhrig?igsh=NTc4MTIwNjQ2YQ==',
     label: '@ashleyjae.uhrig',
-    icon: FaInstagram,
+    iconKey: 'instagram',
+  },
+];
+
+export const spotifyIconLinks: SocialMediaData[] = [
+  {
+    href: 'https://open.spotify.com/show/5VzFvh1JlEhBMS6ZHZ8CNO?si=1de9ed9c7e584ce4',
+    label: '@crestmoreadmissions',
+    iconKey: 'spotify',
+  },
+];
+
+export const youtubeIconLinks: SocialMediaData[] = [
+  {
+    href: 'https://www.youtube.com/@crestmoreadmissions',
+    label: '@crestmoreadmissions',
+    iconKey: 'youtube',
+  },
+];
+
+export const instaIconLinks: SocialMediaData[] = [
+  {
+    href: 'https://www.instagram.com/crestmoreadmissions?igsh=NTc4MTIwNjQ2YQ==',
+    label: '@crestmoreadmissions',
+    iconKey: 'instagram',
+  },
+];
+
+export const tiktokIconLinks: SocialMediaData[] = [
+  {
+    href: 'https://www.tiktok.com/@crestmoreadmissions?_r=1&_t=ZP-93QvC9D6mDu',
+    label: '@crestmoreadmissions',
+    iconKey: 'tiktok',
   },
 ];
