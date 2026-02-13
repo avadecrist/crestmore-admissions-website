@@ -47,6 +47,7 @@ export default function IconLink({
       className={`inline-flex items-center gap-2 rounded-lg p-1 transition-all duration-200 hover:scale-105 ${className}`}
       target="_blank"
       rel="noreferrer"
+      aria-label={`Link to ${iconKey}`}
     >
       <Icon size={size} />
       {variant === 'labeled' && label && <span>{label}</span>}

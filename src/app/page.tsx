@@ -16,13 +16,13 @@ export default function Home() {
    * We also want to update the URL without a full page reload, so we use history.replaceState.
    */
   useEffect(() => {
-  if (window.location.hash) {
-    const id = window.location.hash.replace('#', '');
-    requestAnimationFrame(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-}, []);
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  }, []);
 
   const pathname = usePathname();
 
@@ -98,7 +98,7 @@ export default function Home() {
     
     {/* Episodes Section */}
     <div className='py-10 md:py-20'>
-      <section id='episodes' className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'> 
+      <section id='episodes' className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10'> 
         <div className='w-full border-b border-offblack pb-6 text-center'>
           <h2 className='text-navy'>Episodes</h2>
           <p className='text-navy mt-2'>New episodes will drop every Friday, beginning February 27, 2026!</p>
@@ -106,24 +106,24 @@ export default function Home() {
 
         {/* Placeholder timer before adding episodes */}
         <TimerSection />
-
+        
       </section>
+
+      {/* Border Divider */}
+      <div className='h-[1px] bg-offblack mx-20 md:mx-48 lg:mx-75' />
     </div>
+
 
     {/* Testing donations section */}
-    <div className='py-10 md:py-20 bg-white'>
-  <section
-    id='donate'
-    className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'
-  >
-    <div className='w-full border-b border-offblack pb-6 text-center'>
-      <h2 className='text-navy'>Support the Podcast</h2>
-      <p className='text-navy mt-2 max-w-2xl mx-auto'>
-        We’re a student-created comedy podcast bringing original episodes to life.
-        Your support helps cover recording equipment, hosting fees, editing tools,
-        and future productions.
-      </p>
-    </div>
+    <div className='pb-10 md:pb-20'>
+     <section id='donate' className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'>
+      <div className='w-full border-b border-offblack pb-6 text-center'>
+        <h2 className='text-navy'>Support the Podcast</h2>
+        <p className='text-navy mt-2 max-w-2xl mx-auto'>
+          This original Audio Fiction podcast series was entirely made by students.
+          Your support helps cover production fees, hosting fees, and opens up more opportunities for student creators to bring their stories to life.
+        </p>
+      </div>
 
     {/* Donation Card */}
     <div className='mt-12 w-full max-w-xl bg-offwhite border border-offblack rounded-2xl shadow-sm p-8 text-center'>
@@ -132,8 +132,8 @@ export default function Home() {
       </h3>
 
       <p className='mt-4 text-navy text-sm'>
-        Every contribution helps us continue creating, recording, and releasing
-        new episodes. Thank you for supporting student creators.
+        Any contribution, big or small, makes a difference and allows us to progress our journey with Crestmore Admissions!
+        Thank you for being a part of our community and helping us keep the mics on!
       </p>
 
       <a
@@ -149,10 +149,9 @@ export default function Home() {
         Secure payments powered by Stripe
       </p>
     </div>
-  </section>
-</div>
+   </section>
+  </div>
 
-    
   </main> 
   );
 }

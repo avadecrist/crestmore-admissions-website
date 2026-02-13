@@ -36,8 +36,8 @@ class Footer extends Component {
                   href={link.href}
                   iconKey={link.iconKey}
                   label={link.label}
-                  variant="icon"
-                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                  variant='icon'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
               {youtubeIconLinks.map((link) => (
@@ -46,8 +46,8 @@ class Footer extends Component {
                   href={link.href}
                   iconKey={link.iconKey}
                   label={link.label}
-                  variant="icon"
-                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                  variant='icon'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
               {instaIconLinks.map((link) => (
@@ -56,8 +56,8 @@ class Footer extends Component {
                   href={link.href}
                   iconKey={link.iconKey}
                   label={link.label}
-                  variant="icon"
-                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                  variant='icon'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
               {tiktokIconLinks.map((link) => (
@@ -66,8 +66,8 @@ class Footer extends Component {
                   href={link.href}
                   iconKey={link.iconKey}
                   label={link.label}
-                  variant="icon"
-                  className="text-beige bg-navy hover:bg-navy/90 rounded-lg p-1"
+                  variant='icon'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
           </div>
