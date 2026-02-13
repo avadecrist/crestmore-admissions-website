@@ -1,7 +1,7 @@
 import CountdownTimer from '@/app/ui/components/countdown-timer';
 
 export default function TimerSection() {
-  const launchDate = new Date(Date.UTC(2026, 1, 10, 17, 0, 0));
+  const launchDate = new Date(Date.UTC(2026, 1, 27, 19, 0, 0));
 
   return (
     

@@ -109,6 +109,49 @@ export default function Home() {
 
       </section>
     </div>
+
+    {/* Testing donations section */}
+    <div className='py-10 md:py-20 bg-white'>
+  <section
+    id='donate'
+    className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10 pb-10'
+  >
+    <div className='w-full border-b border-offblack pb-6 text-center'>
+      <h2 className='text-navy'>Support the Podcast</h2>
+      <p className='text-navy mt-2 max-w-2xl mx-auto'>
+        We’re a student-created comedy podcast bringing original episodes to life.
+        Your support helps cover recording equipment, hosting fees, editing tools,
+        and future productions.
+      </p>
+    </div>
+
+    {/* Donation Card */}
+    <div className='mt-12 w-full max-w-xl bg-offwhite border border-offblack rounded-2xl shadow-sm p-8 text-center'>
+      <h3 className='text-xl font-semibold text-navy'>
+        Keep the Mics On 🎙️
+      </h3>
+
+      <p className='mt-4 text-navy text-sm'>
+        Every contribution helps us continue creating, recording, and releasing
+        new episodes. Thank you for supporting student creators.
+      </p>
+
+      <a
+        href='https://buy.stripe.com/test_5kQfZg6dc9EQb71aNy0sU00'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='mt-8 inline-block rounded-xl bg-navy px-8 py-3 text-white font-semibold hover:opacity-90 transition'
+      >
+        Donate Now
+      </a>
+
+      <p className='mt-4 text-xs text-navy opacity-70'>
+        Secure payments powered by Stripe
+      </p>
+    </div>
+  </section>
+</div>
+
     
   </main> 
   );

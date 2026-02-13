@@ -29,13 +29,14 @@ export default function Contact() {
             </section>
 
             {/* Main Section */}
-            <section id='contact-main' className='mx-auto max-w-7xl flex flex-col items-center'>
+            <section id='contact-main' className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center'>
                 {/* Border Line */}
-                <div className='w-full border-b border-black pt-10'></div>
+                <div className='w-full border-b border-black mt-10' />
+
 
                 <div className='w-full py-20'>
                     {/* Headers */}
-                    <h2 className='text-offblack text-center mb-20'>Stay in the Loop!</h2>
+                    <h1 className='text-offblack text-center mb-20'>Stay in the Loop!</h1>
                     <h3 className='text-navy text-center mb-5'>Follow Us on Social Media</h3>
 
                     {/* Social Media Info */}
