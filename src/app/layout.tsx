@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Abhaya_Libre, Alegreya_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./ui/components/navbar";
-import Footer from "./ui/footer/footer";
+import Navbar from "./_ui/components/navbar";
+import Footer from "./_ui/footer/footer";
 
 
 const abhayaLibre = Abhaya_Libre({

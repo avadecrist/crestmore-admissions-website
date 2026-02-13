@@ -1,7 +1,7 @@
 'use client';
 import { Component } from 'react';
 import Link from 'next/link';
-import IconLink from '@/app/ui/socials/icon';
+import IconLink from '../socials/icon';
 import { spotifyIconLinks, youtubeIconLinks, instaIconLinks, tiktokIconLinks } from '@/app/data/social-links';
 
 class Footer extends Component {

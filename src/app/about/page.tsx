@@ -1,8 +1,8 @@
 'use client';
 
-import AboutHeader from '../ui/about/about-header';
-import AboutStory from '../ui/about/about-story';
-import AboutCreators from '../ui/about/about-creators';
+import AboutHeader from '../_ui/about/about-header';
+import AboutStory from '../_ui/about/about-story';
+import AboutCreators from '../_ui/about/about-creators';
 
 export default function About() {
     return (

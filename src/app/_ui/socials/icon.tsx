@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { FaSpotify, FaYoutube, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
 import type { SocialIconKey } from '@/app/data/social-links';

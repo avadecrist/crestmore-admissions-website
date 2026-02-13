@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import TimerSection from './ui/components/temp-timer-section';
+import TimerSection from './_ui/components/temp-timer-section';
 import { useEffect } from 'react';
 
 export default function Home() {

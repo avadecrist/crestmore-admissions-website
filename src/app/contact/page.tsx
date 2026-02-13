@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import EmbeddedSection from '../ui/components/embedded-section';
+import EmbeddedSection from '../_ui/components/embedded-section';
 
 import { //for testing
   instaIconLinks,
   tiktokIconLinks,
 } from '@/app/data/social-links';
-import SocialEmbedFrame from '../ui/components/social-embed';
+import SocialEmbedFrame from '../_ui/components/social-embed';
 
 export default function Contact() {
     return (

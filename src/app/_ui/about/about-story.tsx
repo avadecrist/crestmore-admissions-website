@@ -1,4 +1,4 @@
-import TimelineEvent from "@/app/ui/components/timeline-events";
+import TimelineEvent from "@/app/_ui/components/timeline-events";
 
 export default function AboutStory() {
   const events = [
