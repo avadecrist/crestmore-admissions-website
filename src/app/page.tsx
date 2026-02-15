@@ -1,65 +1,121 @@
-import Image from "next/image";
+'use client';
+import { navigateToSection } from './lib/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import TimerSection from './_ui/components/temp-timer-section';
+import { useEffect } from 'react';
+import DonateSection from './_ui/components/donate-section';
 
 export default function Home() {
+
+  const scrollToEpisodes = () => {
+    navigateToSection('episodes'); // helper method
+  };
+
+  // smooth scroll to sections
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'auto' });
+      });
+    }
+  }, []); 
+
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+  <>
+    {/* Hero Section */}
+    <section id='hero' tabIndex={-1} className='py-10 md:py-20 bg-offwhite'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-12 md:flex-row md:gap-6 md:px-10'>
+        {/* LEFT COLUMN */}
+        <div className='w-full md:w-1/2 text-center'>
+
+          <div className='mt-6'>
+            <h1 className='text-navy'>Crestmore Admissions</h1>
+          </div>
+
+          <div className='w-full text-offblack mb-10'>
+            <p>Working at <em>Crestmore Admissions</em> means being a punching bag for angry parents, 
+            confused freshmen, and ridiculous policies. Although it's supposed to be a mindless 
+            student job, the emotional labor is real, and it's slowly breaking them.</p>
+          </div>
+
+        {/* Buttons */}
+          <div className='mt-6 flex justify-center'>
+            <div className='flex flex-row gap-6'>
+              <button
+                type='button'
+                onClick={scrollToEpisodes}
+                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy px-6 text-background transition-all duration-200 hover:bg-[#314D82] dark:hover:bg-[#ccc] hover:scale-105 md:w-[158px]'
+              >
+                Listen Now
+              <Image
+                className='brightness-0 invert'
+                src='/play.svg'
+                alt='Play Icon'
+                width={24}
+                height={24}
+              />
+              </button>
+              <Link
+                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-black/[.08] px-6 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]'
+                href='/contact'
+              >
+                Follow Us
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        {/* RIGHT COLUMN */}
+        <div className='flex w-full md:w-1/2 flex-col items-center'>
+          {/* Top label */}
+          <h2 className='mb-4 self-start md:self-center md:-translate-x-35 text-navy'>
+            Meet Lucy
+          </h2>
+
+          <div className='relative aspect-square w-[320px] sm:w-[380px] md:w-[420px] overflow-hidden rounded-full shadow-xl shadow-black/20'> {/* relative aspect-square w-full overflow-hidden rounded-full shadow-xl shadow-black/20'> */}
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src='/hero.png'
+              alt='Creators of Crestmore Admissions Sitting At a Table'                
+              fill
+              priority
+              sizes='(min-width: 768px) 50vw, 100vw'
+              className='object-cover'
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
+          {/* Bottom label */}
+          <h2 className='mt-4 self-end md:self-center md:translate-x-35 text-navy'>
+            &amp; Sam
+          </h2>
         </div>
-      </main>
+      </div>
+    </section>  
+    
+    {/* Episodes Section */}
+    <div className='py-10 md:py-20'>
+      <section id='episodes' tabIndex={-1} className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10'> 
+        <div className='w-full border-b border-offblack pb-6 text-center'>
+          <h2 className='text-navy'>Episodes</h2>
+          <p className='text-navy mt-2'>New episodes will drop every Friday, beginning February 27, 2026!</p>
+        </div>
+
+        {/* Placeholder timer before adding episodes */}
+        <TimerSection />
+        
+      </section>
+
+      {/* Border Divider */}
+      <div className='h-[1px] bg-offblack mx-20 md:mx-48 lg:mx-75' />
     </div>
+
+
+    {/* Testing donations section */}
+    <DonateSection />
+
+  </> 
   );
 }
+

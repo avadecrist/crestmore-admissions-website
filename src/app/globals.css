@@ -3,24 +3,258 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --offWhite: #f4f4f4;
+  --offBlack: #282828;
+  --primary: #002366;
+  --secondary: #EDE8D0;
+  --font-heading: var(--font-abhaya);
+  --font-body: var(--font-alegreya);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-offwhite: var(--offWhite);
+  --color-offblack: var(--offBlack);
+  --color-navy: var(--primary);
+  --color-beige: var(--secondary);
+
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --offWhite: #282828;
+  --offBlack: #f4f4f4;
+  --background: #071227;
+  --foreground: #e4e4e4;
+  --primary: #EDE8D0;
+  --secondary: #002366;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+@layer base {
+  body {
+    background: rgb(var(--offWhite) / 1);
+    font-family: var(--font-sans), Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), serif;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+  }
+
+
+  /* Desktop headings */
+  h1 {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* 📱 Mobile typography */
+  @media (max-width: 480px) {
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+    }
+
+    h1 { font-size: 36px; line-height: 1.15; }
+    h2 { font-size: 28px; line-height: 1.2; }
+    h3 { font-size: 24px; line-height: 1.25; }
+    h4 { font-size: 20px; }
+    h5 { font-size: 18px; }
+    h6 { font-size: 15px; }
+  }
+
+  .timeline-container {
+    position: relative;
+  }
+
+  /* vertical line */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--offBlack);
+    transform: translateX(-50%);
+  }
+
+  .timeline-event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+   .timeline-date {
+    order: 2;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 2; /* keeps circle above the line */
+  }
+
+  .timeline-date span {
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    background: var(--offBlack);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  .timeline-details {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    order: 3;
+    width: 80%;
+    border-radius: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: #314D82;
+    margin-bottom: 3%;
+    z-index: 3;
+  }
+
+  .timeline-details .timeline-desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-details,
+    .blank-box {
+      width: 32%;
+    }
+
+    .right-side .timeline-details {
+      order: 1;
+    }
+
+    .right-side .blank-box {
+      order: 3;
+    }
+  }
+
+}
+
+/* Ringing Animation for Timer Component */
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .ring-icon {
+    animation: none !important;
+  }
+}
+
+.group:hover .ring-icon {
+  animation: bell-ring 0.6s ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes bell-ring {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+
+.big-wave {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  pointer-events: none;
+  opacity: 0;
+
+  /* Center horizontally on the timer row */
+  left: 50%;
+
+  /* Anchor to the timer row */
+  top: 50%;
+
+  /* Nudge UP so origin feels like it's coming from the numbers row */
+  transform: translate(-50%, -50%) scale(0.5);
+
+  animation: wave 3.0s linear infinite;
+}
+
+.big-wave--2 {
+  animation-delay: -1.5s; 
+}
+
+/* .big-wave--3 {
+  animation-delay: -0.33s; 
+} */
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.22;
+  }
+  70% {
+    opacity: 0.14;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.55);
+    opacity: 0;
+  }
 }
