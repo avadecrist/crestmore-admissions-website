@@ -17,7 +17,7 @@ export default function AboutCreators() {
 
             <div className='relative h-[35vh] min-h-[350px] md:h-[100vh] overflow-hidden px-4'>
                 <Image
-                    src='/creators-smiling.jpg'
+                    src='/creators-smiling.JPG'
                     alt='Crestmore Productions'
                     fill
                     priority

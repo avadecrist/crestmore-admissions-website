@@ -1,33 +1,29 @@
 'use client';
+import { navigateToSection } from './lib/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import TimerSection from './_ui/components/temp-timer-section';
 import { useEffect } from 'react';
 
 export default function Home() {
-  // use DOM scroll for episodes and hero sections
+
   const scrollToEpisodes = () => {
-    document.getElementById('episodes')?.scrollIntoView({ behavior: 'smooth' });
-    pathname === '/' && history.replaceState(null, '', '/#episodes');
+    navigateToSection('episodes'); // helper method
   };
 
-  /* since Next's Link doesn't handle hash changes well when already on the page. 
-   * We also want to update the URL without a full page reload, so we use history.replaceState.
-   */
+  // smooth scroll to sections
   useEffect(() => {
     if (window.location.hash) {
-      const id = window.location.hash.replace('#', '');
+      const id = window.location.hash.slice(1);
       requestAnimationFrame(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(id)?.scrollIntoView({ behavior: 'auto' });
       });
     }
-  }, []);
+  }, []); 
 
-  const pathname = usePathname();
 
   return (
-  <main>
+  <>
     {/* Hero Section */}
     <section id='hero' className='py-10 md:py-20 bg-offwhite'>
       <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-12 md:flex-row md:gap-6 md:px-10'>
@@ -84,6 +80,7 @@ export default function Home() {
               alt='Creators of Crestmore Admissions Sitting At a Table'                
               fill
               priority
+              sizes='(min-width: 768px) 50vw, 100vw'
               className='object-cover'
             />
           </div>
@@ -133,7 +130,7 @@ export default function Home() {
 
       <p className='mt-4 text-navy text-sm'>
         Any contribution, big or small, makes a difference and allows us to progress our journey with Crestmore Admissions!
-        Thank you for being a part of our community and helping us keep the mics on!
+        Thank you for being a part of our community and helping us keep the mics on.
       </p>
 
       <a
@@ -152,7 +149,7 @@ export default function Home() {
    </section>
   </div>
 
-  </main> 
+  </> 
   );
 }
 

@@ -1,6 +1,8 @@
 'use client';
 import { Component } from 'react';
+import { navigateToSection } from '@/app/lib/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import IconLink from '../socials/icon';
 import { spotifyIconLinks, youtubeIconLinks, instaIconLinks, tiktokIconLinks } from '@/app/data/social-links';
 
@@ -14,13 +16,29 @@ class Footer extends Component {
           
           {/* Logo and Quick Links */}
           <div className='text-left text-offblack gap-4 flex flex-row items-center'>
-              <Link href='/'>
-                  <img src='/footer-logo.png' alt='Crestmore Admissions Logo' className='h-12 w-auto'/>
+              <Link 
+                href='/#hero'
+                onClick={(e) => {
+                  if (window.location.pathname === '/') {
+                    e.preventDefault();
+                    navigateToSection('hero');
+                  }
+                }}
+              >
+                <Image 
+                  src='/footer-logo.png' 
+                  alt='Crestmore Admissions Logo' 
+                  width={1740}
+                  height={700}
+                  className='h-12 w-auto'/>
               </Link>
+
               <span>|</span>
+
               <Link href='/about' className='text-md hover:underline'>
                   About Us
               </Link>
+
               <Link href='/contact' className='text-md hover:underline'>
                   Contact Us
               </Link>

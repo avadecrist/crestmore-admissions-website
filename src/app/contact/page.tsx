@@ -36,7 +36,7 @@ export default function Contact() {
 
                 <div className='w-full py-20'>
                     {/* Headers */}
-                    <h1 className='text-offblack text-center mb-20'>Stay in the Loop!</h1>
+                    <h2 className='text-offblack text-center mb-20'>Stay in the Loop!</h2>
                     <h3 className='text-navy text-center mb-5'>Follow Us on Social Media</h3>
 
                     {/* Social Media Info */}
@@ -46,7 +46,7 @@ export default function Contact() {
                             iconLinks={instaIconLinks}
                             embeddedContent={
                               <SocialEmbedFrame
-                                src="https://www.instagram.com/p/C30iJSaPSdg/embed"
+                                src="https://www.instagram.com/crestmoreadmissions/embed"
                                 title="Instagram post"
                                 aspect="4/5"
                               />

@@ -36,7 +36,7 @@ export const ashleyIconLinks: SocialMediaData[] = [
 
 export const spotifyIconLinks: SocialMediaData[] = [
   {
-    href: 'https://open.spotify.com/show/5VzFvh1JlEhBMS6ZHZ8CNO?si=1de9ed9c7e584ce4',
+    href: 'https://open.spotify.com/user/31dufnibz7g5hrfmtqmupr7yk4w4?si=c1480335f0704905',
     label: '@crestmoreadmissions',
     iconKey: 'spotify',
   },

@@ -1,8 +1,9 @@
 'use client';
-
+import { navigateToSection } from '@/app/lib/navigation';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { label: 'Home', href: '/#hero' },
@@ -18,14 +19,38 @@ type NavLinksProps = {
 export default function NavLinks({ onNavigate }: NavLinksProps) {
   const pathname = usePathname();
   const router = useRouter();
+  const [hash, setHash] = useState(''); //i.e '' | '#hero' | '#episodes' | etc.
 
+  useEffect(() => {  
+    const update = () => setHash(window.location.hash || '');
+    update();
+
+    window.addEventListener('hashchange', update);
+    window.addEventListener('popstate', update); // back/forward + replaceState history updates
+
+    return () => {
+      window.removeEventListener('hashchange', update);
+      window.removeEventListener('popstate', update);
+    };
+  }, [pathname]); // re-run on pathname change to reset hash for non-homepage routes
+  
   return (
     <>
       {navLinks.map((link) => {
-        const isActive = pathname === link.href;
+        const onHomePage = pathname === '/';
+        const isHashLink = link.href.startsWith('/#');
+        const targetId = isHashLink ? link.href.split('#')[1] : null; // 'hero' | 'episodes'
+        const targetHash = targetId ? `#${targetId}` : '';
 
-        const isEpisodes = link.label === 'Episodes';
-        const isHome = link.label === 'Home';
+        // Episodes active only when hash === '#episodes'
+        // Home active for everything else on the homepage (including '/', '#hero')
+        let isActive = false;
+        if (!isHashLink) {
+          isActive = pathname === link.href;
+        } else if (onHomePage) {
+          if (link.label === 'Episodes') isActive = hash === '#episodes';
+          if (link.label === 'Home') isActive = hash === '' || hash === '#hero'; // default on home
+        }
 
         return (
           <Link
@@ -35,22 +60,15 @@ export default function NavLinks({ onNavigate }: NavLinksProps) {
               // mobile menu close etc
               onNavigate?.();
 
-              // Force hash changes if already on 'Home' or 'Episodes' to trigger scrollIntoView
-              if (isEpisodes && pathname === '/') {
+              // if we're already on the homepage, handle hash links with smooth scroll + URL update
+              if (onHomePage && isHashLink && targetId) {
                 e.preventDefault();
-                router.push('/#episodes');
+                navigateToSection(targetId);
+                setHash(`#${targetId}`); // ensures active state updates immediately
+                return;
               }
-            
-              if (link.label === 'Home' && pathname === '/') {
-                e.preventDefault();
-                document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
-                history.replaceState(null, '', '/#hero');
-              }
-              if (link.label === 'Episodes' && pathname === '/') {
-                e.preventDefault();
-                document.getElementById('episodes')?.scrollIntoView({ behavior: 'smooth' });
-                history.replaceState(null, '', '/#episodes');
-              }
+              // else, let Next navigate normally
+              router.push(link.href);
 
             }}
             className={clsx(

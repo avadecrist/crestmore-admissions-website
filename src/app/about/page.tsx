@@ -6,7 +6,7 @@ import AboutCreators from '../_ui/about/about-creators';
 
 export default function About() {
     return (
-    <main>
+    <>
         {/* HEADER */}
         <AboutHeader />
 
@@ -16,6 +16,6 @@ export default function About() {
         {/* THE CREATORS */}
         <AboutCreators />
         
-    </main>
+    </>
     );
 }
