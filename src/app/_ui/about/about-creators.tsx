@@ -67,7 +67,7 @@ export default function AboutCreators() {
                 imageSrc='/ashley-bio.jpg'
                 aboutTitle='About Ashley'
                 paragraphs={[
-                    'Ashley Jae Uhrig is a film student originally from Moscow, Idaho. She is currently pursuing a degree in Creative Producing at Chapman University’s Dodge College of Film and Media Arts. She specializes in post-production/editing but enjoys all aspects of film production',
+                    'Ashley Jae Uhrig is a film student originally from Moscow, Idaho. She is currently pursuing a degree in Creative Producing at Chapman University’s Dodge College of Film and Media Arts. She specializes in post-production/editing but enjoys all aspects of film production.',
                 ]}
                 iconLinks={ashleyIconLinks}
                 variant='swapped'

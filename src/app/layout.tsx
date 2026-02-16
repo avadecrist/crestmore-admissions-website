@@ -18,7 +18,7 @@ const alegreyaSans = Alegreya_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Crestmore Admissions | A Comedy Series Podcast",
+  title: "Crestmore Admissions",
   description: "Officiate website for the Crestmore Admissions Podcast.",
 };
 
