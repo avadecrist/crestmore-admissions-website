@@ -44,7 +44,7 @@ export default function CountdownTimer({ expiryTimestamp, variant = 'default', }
 
 function TimeBlock({ label, value, small = false }: { label: string; value: number; small?: boolean }) {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center text-offblack'>
       <span className={`
           font-semibold tabular-nums
           ${small ? 'text-lg' : 'text-4xl'}

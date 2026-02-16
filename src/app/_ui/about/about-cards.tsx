@@ -34,7 +34,7 @@ export default function AboutCard({
         <div className='grid grid-cols-1 md:grid-cols-2'>
 
           {/* LEFT: Navy panel */}
-          <div className={`relative bg-navy px-10 py-10 ${isSwapped ? 'md:order-2' : 'md:order-1'}`}>
+          <div className={`relative bg-navy dark:bg-[#314D82] px-10 py-10 ${isSwapped ? 'md:order-2' : 'md:order-1'}`}>
             <div className='text-offwhite'>
               <h3 className='tracking-wide text-center'>{name.toUpperCase()}</h3>
               <p className='mt-2 text-[10px] font-medium tracking-[0.25em] opacity-80'>

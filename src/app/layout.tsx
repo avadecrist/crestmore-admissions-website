@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Abhaya_Libre, Alegreya_Sans } from "next/font/google";
+import { Abhaya_Libre, Alegreya_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_ui/components/navbar";
 import Footer from "./_ui/footer/footer";
@@ -18,9 +18,31 @@ const alegreyaSans = Alegreya_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Crestmore Admissions",
-  description: "Officiate website for the Crestmore Admissions Podcast.",
+  metadataBase: new URL("https://crestmoreadmissions.com"),
+  title: {
+    default: "Crestmore Admissions",
+    template: "%s | Crestmore Admissions",
+  },
+  description:
+    "An original Audio Fiction podcast series created by students, for students.",
+  openGraph: {
+    title: "Crestmore Admissions",
+    description:
+      "An original Audio Fiction podcast series created by students, for students. Inspired by the real-life experiences of student workers in college admissions offices.",
+    url: "https://crestmoreadmissions.com",
+    siteName: "Crestmore Admissions",
+    images: [
+      {
+        url: "/hero.webp", 
+        width: 1600,
+        height: 1600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,

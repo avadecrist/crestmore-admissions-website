@@ -7,6 +7,7 @@
   --offBlack: #282828;
   --primary: #002366;
   --secondary: #EDE8D0;
+  
   --font-heading: var(--font-abhaya);
   --font-body: var(--font-alegreya);
 }
@@ -26,12 +27,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --offWhite: #282828;
-  --offBlack: #f4f4f4;
-  --background: #071227;
-  --foreground: #e4e4e4;
+  --background: #f4f4f4;
+  --foreground: #F1F1F1;
+  --offWhite: #1A1D24;
+  --offBlack: #E8E8E8;
   --primary: #EDE8D0;
-  --secondary: #002366;
+  --secondary: #f4f4f4;
   }
 }
 
@@ -229,7 +230,7 @@
   top: 50%;
 
   /* Nudge UP so origin feels like it's coming from the numbers row */
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -45%) scale(0.5);
 
   animation: wave 3.0s linear infinite;
 }
@@ -238,13 +239,10 @@
   animation-delay: -1.5s; 
 }
 
-/* .big-wave--3 {
-  animation-delay: -0.33s; 
-} */
 
 @keyframes wave {
   0% {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -45%) scale(0.5);
     opacity: 0;
   }
   12% {
@@ -254,7 +252,7 @@
     opacity: 0.14;
   }
   100% {
-    transform: translate(-50%, -50%) scale(1.55);
+    transform: translate(-50%, -45%) scale(1.55);
     opacity: 0;
   }
 }

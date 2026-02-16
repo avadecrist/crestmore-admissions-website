@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from 'next/image';
 import EmbeddedSection from '../_ui/components/embedded-section';
 
@@ -6,6 +7,11 @@ import { //for testing
   tiktokIconLinks,
 } from '@/app/data/social-links';
 import SocialEmbedFrame from '../_ui/components/social-embed';
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with the creators of Crestmore Admissions.",
+};
 
 export default function Contact() {
     return (
