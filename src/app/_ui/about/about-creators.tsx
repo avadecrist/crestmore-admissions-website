@@ -38,7 +38,7 @@ export default function AboutCreators() {
                     absolute left-1/2 top-1/2
                     -translate-x-1/2 -translate-y-1/4
                     z-0
-                    w-[450px] md:w-[475px]
+                    w-[90%] max-w-[475px]
                     opacity-100
                     '
                 />
