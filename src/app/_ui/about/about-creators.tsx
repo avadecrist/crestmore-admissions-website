@@ -53,7 +53,7 @@ export default function AboutCreators() {
             <AboutCard
                 name='Chloe Avant & Shaira Yousuf'
                 role='Producer / Co-Directors & Co-Writers'
-                imageSrc='/chloe-shaira-bio.jpg'
+                imageSrc='/chloe-shaira-bio.JPG'
                 aboutTitle='About Chloe and Shaira'
                 paragraphs={[
                     'Chloe and Shaira met working at their on-campus jobs at Chapman University and hit it off immediately! Both being screenwriters, they took Michael Weiss’s “Writing for Evolving Platforms” course where they were introduced to Audio Fiction, specifically “The Bright Sessions” written by Lauren Shippen. With many fun anecdotes from their on-campus jobs they decided to team up to create Crestmore Admissions, an original comedy Audio Fiction show.',
