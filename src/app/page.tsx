@@ -77,7 +77,7 @@ export default function Home() {
 
           <div className='relative aspect-square w-[320px] sm:w-[380px] md:w-[420px] overflow-hidden rounded-full shadow-xl shadow-black/20'> {/* relative aspect-square w-full overflow-hidden rounded-full shadow-xl shadow-black/20'> */}
             <Image
-              src='/hero.png'
+              src='/hero.webp'
               alt='Creators of Crestmore Admissions Sitting At a Table'                
               fill
               priority

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/image'; 
 import AboutCard from './about-cards';
 
 import {
@@ -38,7 +38,7 @@ export default function AboutCreators() {
                     absolute left-1/2 top-1/2
                     -translate-x-1/2 -translate-y-1/4
                     z-0
-                    w-[520px] md:w-[475px]
+                    w-[450px] md:w-[475px]
                     opacity-100
                     '
                 />
@@ -53,7 +53,7 @@ export default function AboutCreators() {
             <AboutCard
                 name='Chloe Avant & Shaira Yousuf'
                 role='Producer / Co-Directors & Co-Writers'
-                imageSrc='/chloe-shaira-bio.JPG'
+                imageSrc='/chloe-shaira-bio.jpg'
                 aboutTitle='About Chloe and Shaira'
                 paragraphs={[
                     'Chloe and Shaira met working at their on-campus jobs at Chapman University and hit it off immediately! Both being screenwriters, they took Michael Weiss’s “Writing for Evolving Platforms” course where they were introduced to Audio Fiction, specifically “The Bright Sessions” written by Lauren Shippen. With many fun anecdotes from their on-campus jobs they decided to team up to create Crestmore Admissions, an original comedy Audio Fiction show.',
@@ -64,7 +64,7 @@ export default function AboutCreators() {
             <AboutCard
                 name='Ashley Uhrig'
                 role='Sound Designer'
-                imageSrc='/creators-smiling.JPG'
+                imageSrc='/ashley-bio.jpg'
                 aboutTitle='About Ashley'
                 paragraphs={[
                     'Ashley Jae Uhrig is a film student originally from Moscow, Idaho. She is currently pursuing a degree in Creative Producing at Chapman University’s Dodge College of Film and Media Arts. She specializes in post-production/editing but enjoys all aspects of film production',

@@ -18,7 +18,7 @@ const alegreyaSans = Alegreya_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Crestmore Admissions Podcast",
+  title: "Crestmore Admissions | A Comedy Series Podcast",
   description: "Officiate website for the Crestmore Admissions Podcast.",
 };
 
@@ -29,9 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${abhayaLibre.variable} ${alegreyaSans.variable} antialiased`}>
-      <body>
+      <body className='min-h-screen flex flex-col bg-offwhite overscroll-none'>
         <Navbar />
-        {children}
+        <main className='flex-1 bg-background'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

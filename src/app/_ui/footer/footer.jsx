@@ -10,9 +10,9 @@ class Footer extends Component {
   render() {
     const current_year = new Date().getFullYear();
     return (
-      <footer className='pt-5 pb-2 bg-offwhite border-top'>
+      <footer className='pt-5 pb-2 bg-offwhite w-full'>
         {/* entire row */}
-        <div className='px-15 flex flex-col items-center justify-between flex-col gap-4 md:flex-row'>
+        <div className='max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-4 md:flex-row'>
           
           {/* Logo and Quick Links */}
           <div className='text-left text-offblack gap-4 flex flex-row items-center'>
@@ -58,7 +58,8 @@ class Footer extends Component {
                   className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
-              {youtubeIconLinks.map((link) => (
+              {/* uncomment after making youtube channel */}
+              {/* {youtubeIconLinks.map((link) => (
                 <IconLink
                   key={link.href}
                   href={link.href}
@@ -67,7 +68,7 @@ class Footer extends Component {
                   variant='icon'
                   className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
-              ))}
+              ))} */}
               {instaIconLinks.map((link) => (
                 <IconLink
                   key={link.href}
