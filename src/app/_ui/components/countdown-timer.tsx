@@ -23,8 +23,8 @@ export default function CountdownTimer({ expiryTimestamp, variant = 'default', }
   const isSmall = variant === 'small';
 
   return (
-    <div className={`relative flex z-10 items-start group cursor-pointer
-        ${isSmall ? 'gap-3' : 'gap-6'}
+    <div className={`relative flex z-10 items-start group
+        ${isSmall ? 'gap-3' : 'gap-6 cursor-pointer'}
       `}>
 
       {!isSmall && (

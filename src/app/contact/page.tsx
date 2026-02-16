@@ -10,12 +10,12 @@ import SocialEmbedFrame from '../_ui/components/social-embed';
 export default function Contact() {
     return (
         <main>
-            <section id='contact-header' className='mx-auto bg-offwhite px-12 md:px-40'>
-                <div className='relative h-[30vh] min-h-[200px] md:h-[75vh] overflow-hidden px-4'>
+            <section id='contact-header' className='mx-auto bg-offwhite lg:px-40 md:px-30 sm:px-20'>
+                <div className='relative h-[35vh] min-h-[300px] md:h-[70vh] overflow-hidden px-4'>
                     {/* Layer 1: background image */}
                     <Image
-                        src='/on-desk.png'
-                        alt='Crestmore Productions'
+                        src='/on-desk.jpg'
+                        alt='Crestmore Productions Co-Directors'
                         fill
                         priority
                         className='object-cover object-[50%_34%] md:object-[50%_35%] opacity-50'

@@ -58,7 +58,8 @@ class Footer extends Component {
                   className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
-              {youtubeIconLinks.map((link) => (
+              {/* uncomment after making youtube channel */}
+              {/* {youtubeIconLinks.map((link) => (
                 <IconLink
                   key={link.href}
                   href={link.href}
@@ -67,7 +68,7 @@ class Footer extends Component {
                   variant='icon'
                   className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
-              ))}
+              ))} */}
               {instaIconLinks.map((link) => (
                 <IconLink
                   key={link.href}
