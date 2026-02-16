@@ -29,9 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${abhayaLibre.variable} ${alegreyaSans.variable} antialiased`}>
-      <body className='min-h-screen flex flex-col'>
+      <body className='min-h-screen flex flex-col bg-offwhite overscroll-none'>
         <Navbar />
-        <main className='flex-1'>
+        <main className='flex-1 bg-background'>
           {children}
         </main>
         <Footer />
