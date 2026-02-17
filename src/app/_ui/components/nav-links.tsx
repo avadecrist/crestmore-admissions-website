@@ -72,8 +72,8 @@ export default function NavLinks({ onNavigate }: NavLinksProps) {
 
             }}
             className={clsx(
-              'rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100',
-              isActive && 'bg-gray-100',
+              'rounded-md px-3 py-2 text-sm text-offblack font-medium transition-colors hover:bg-offwhite/80',
+              isActive && 'bg-offwhite/80',
             )}
             aria-current={isActive ? 'page' : undefined}
           >

@@ -55,7 +55,7 @@ class Footer extends Component {
                   iconKey={link.iconKey}
                   label={link.label}
                   variant='icon'
-                  className='text-beige bg-navy dark:bg-[#314D82] hover:bg-navy/90 dark:hover:bg-[#314D82]/90 rounded-lg p-1'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
               {/* uncomment after making youtube channel */}
@@ -66,7 +66,7 @@ class Footer extends Component {
                   iconKey={link.iconKey}
                   label={link.label}
                   variant='icon'
-                  className='text-beige bg-navy dark:bg-[#314D82] hover:bg-navy/90 dark:hover:bg-[#314D82]/90 rounded-lg p-1'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))} */}
               {instaIconLinks.map((link) => (
@@ -76,7 +76,7 @@ class Footer extends Component {
                   iconKey={link.iconKey}
                   label={link.label}
                   variant='icon'
-                  className='text-beige bg-navy dark:bg-[#314D82] hover:bg-navy/90 dark:hover:bg-[#314D82]/90 rounded-lg p-1'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
               {tiktokIconLinks.map((link) => (
@@ -86,7 +86,7 @@ class Footer extends Component {
                   iconKey={link.iconKey}
                   label={link.label}
                   variant='icon'
-                  className='text-beige bg-navy dark:bg-[#314D82] hover:bg-navy/90 dark:hover:bg-[#314D82]/90 rounded-lg p-1'
+                  className='text-beige bg-navy hover:bg-navy/90 rounded-lg p-1'
                 />
               ))}
           </div>
