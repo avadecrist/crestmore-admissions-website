@@ -13,7 +13,7 @@ export default function Navbar() {
   const launchDate = new Date(Date.UTC(2026, 1, 27, 19, 0, 0));
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur`}>
+    <header className={`sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur`}>
       <nav className={`font-serif mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6`}>
         {/* Logo */}
         <Link 
@@ -68,7 +68,7 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="border-t bg-white md:hidden"
+        className="border-t bg-background md:hidden"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
           <NavLinks onNavigate={() => setOpen(false)} />
