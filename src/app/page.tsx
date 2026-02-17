@@ -53,7 +53,7 @@ export default function Home() {
               <button
                 type='button'
                 onClick={scrollToEpisodes}
-                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy px-6 text-offwhite transition-all duration-200 hover:bg-[#314D82]/[0.8] hover:scale-105 md:w-[158px]'
+                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy px-6 text-offwhite transition-all duration-200 hover:bg-navy/[0.8] hover:scale-105 md:w-[158px]'
               >
                 Listen Now
               <Image
