@@ -25,7 +25,7 @@ export default function DonateSection() {
             href='https://buy.stripe.com/test_5kQfZg6dc9EQb71aNy0sU00'
             target='_blank'
             rel='noopener noreferrer'
-            className='mt-8 inline-block rounded-xl bg-navy dark:bg-[#314D82] px-8 py-3 text-white font-semibold hover:opacity-90 transition'
+            className='mt-8 inline-block rounded-xl bg-navy px-8 py-3 text-white font-semibold hover:opacity-90 transition'
           >
             Donate Now
           </Link>

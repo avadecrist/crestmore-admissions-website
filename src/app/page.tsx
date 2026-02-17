@@ -53,7 +53,7 @@ export default function Home() {
               <button
                 type='button'
                 onClick={scrollToEpisodes}
-                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy dark:bg-[#314D82] px-6 text-background dark:text-navy transition-all duration-200 hover:bg-[#314D82]/[0.8] hover:scale-105 md:w-[158px]'
+                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy px-6 text-background transition-all duration-200 hover:bg-[#314D82]/[0.8] hover:scale-105 md:w-[158px]'
               >
                 Listen Now
               <Image
@@ -65,7 +65,7 @@ export default function Home() {
               />
               </button>
               <Link
-                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-foreground/[.08] dark:border-beige px-6 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent dark:hover:border-beige/[0.4] hover:bg-foreground/[.04] dark:hover:bg-beige/[.04] md:w-[158px]'
+                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-foreground/[.08] px-6 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-foreground/[.04] md:w-[158px]'
                 href='/contact'
               >
                 Follow Us
