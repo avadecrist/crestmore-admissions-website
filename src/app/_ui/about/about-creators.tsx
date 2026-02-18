@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image'; 
 import AboutCard from './about-cards';
+import { useIsDarkMode } from '@/app/lib/useIsDarkMode';
 
 import {
   chloeIconLinks,
@@ -8,13 +10,14 @@ import {
 } from '@/app/data/social-links';
 
 export default function AboutCreators() {
+    const isDark = useIsDarkMode();
     return (
         <section>
             {/* Border Line */}
             <div className='pt-20 pb-10 flex justify-center'>
-                <div className='w-2/3 border-b border-black/40' />
+                <div className='w-2/3 border-b border-offblack/40' />
             </div>
-
+            
             <div className='relative h-[35vh] min-h-[350px] md:h-[100vh] overflow-hidden px-4'>
                 <Image
                     src='/creators-smiling.JPG'
@@ -24,9 +27,11 @@ export default function AboutCreators() {
                     className='object-cover md:object-[50%_40%]'
                 /> 
             </div>
+        
 
             <div className='relative mx-auto py-10'>
                 {/* Cord that overlaps the heading */}
+                {!isDark && (
                 <Image
                     src='/coiled-cord-divider.png'
                     alt='Phone with Coiled Cord Attached to Phone Box'
@@ -42,7 +47,8 @@ export default function AboutCreators() {
                     opacity-100
                     '
                 />
-
+                )}
+                
                 {/* H2 Header */}
                 <h2 className='relative z-10 text-center text-navy tracking-wide'>
                     MEET THE CREATORS

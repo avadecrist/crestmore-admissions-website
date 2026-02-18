@@ -1,16 +1,18 @@
 'use client';
-import { Component } from 'react';
+import { useIsDarkMode } from '@/app/lib/useIsDarkMode';
 import { navigateToSection } from '@/app/lib/navigation';
+import ThemeToggle from '../components/toggle-theme';
 import Link from 'next/link';
 import Image from 'next/image';
 import IconLink from '../socials/icon';
 import { spotifyIconLinks, youtubeIconLinks, instaIconLinks, tiktokIconLinks } from '@/app/data/social-links';
 
-class Footer extends Component {
-  render() {
-    const current_year = new Date().getFullYear();
+export default function Footer() {
+  const isDark = useIsDarkMode();
+  
+  const current_year = new Date().getFullYear();
     return (
-      <footer className='pt-5 pb-2 bg-offwhite w-full'>
+      <footer className='pt-5 pb-2 bg-offwhite w-full relative'>
         {/* entire row */}
         <div className='max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-4 md:flex-row'>
           
@@ -26,11 +28,12 @@ class Footer extends Component {
                 }}
               >
                 <Image 
-                  src='/footer-logo.png' 
+                  src={isDark ? '/header-icon.png' : '/footer-logo.png'}
                   alt='Crestmore Admissions Logo' 
-                  width={1740}
-                  height={700}
-                  className='h-12 w-auto'/>
+                  width={isDark ? 635 : 1740}
+                  height={isDark ? 601 : 700}
+                  className={isDark ? 'h-8 w-auto' : 'h-12 w-auto'}
+                />
               </Link>
 
               <span>|</span>
@@ -96,8 +99,13 @@ class Footer extends Component {
         <div className='text-sm text-center text-offblack mt-4'>
           <h6 className='text-sm'>&copy; {current_year} Crestmore Productions</h6>
         </div>
+
+        {/* toggle pinned to bottom-right for MOBILE */}
+        <div className="absolute right-4 bottom-2 z-60 p-2 md:hidden">
+          <ThemeToggle />
+        </div>
+
       </footer>
     );
-  }
+  
 }
-export default Footer;

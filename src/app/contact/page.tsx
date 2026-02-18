@@ -37,7 +37,7 @@ export default function Contact() {
             {/* Main Section */}
             <section id='contact-main' className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center'>
                 {/* Border Line */}
-                <div className='w-full border-b border-black mt-10' />
+                <div className='w-full border-b border-offblack mt-10' />
 
 
                 <div className='w-full py-20'>
@@ -76,7 +76,7 @@ export default function Contact() {
                 
 
                 {/* Bottom Border Line */}
-                <div className='w-full border-t border-black pb-10'></div>
+                <div className='w-full border-t border-offblack pb-10'></div>
                 
             </section>
         </main>
