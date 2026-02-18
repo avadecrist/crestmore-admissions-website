@@ -20,7 +20,7 @@ export default function AboutCreators() {
             
             <div className='relative h-[35vh] min-h-[350px] md:h-[100vh] overflow-hidden px-4'>
                 <Image
-                    src='/chloe-shaira-bio.jpg'
+                    src='/chloe-shaira-bio.JPG'
                     alt='Crestmore Productions'
                     fill
                     priority
