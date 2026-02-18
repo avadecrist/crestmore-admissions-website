@@ -1,12 +1,16 @@
 import { Metadata } from "next";
 import Image from 'next/image';
 import EmbeddedSection from '../_ui/components/embedded-section';
+import SocialEmbedFrame from '../_ui/components/social-embed';
+import AboutCard from "../_ui/about/about-cards";
 
-import { //for testing
+import { 
+  chloeIconLinks,
   instaIconLinks,
+  shairaIconLinks,
   tiktokIconLinks,
 } from '@/app/data/social-links';
-import SocialEmbedFrame from '../_ui/components/social-embed';
+
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -16,34 +20,48 @@ export const metadata: Metadata = {
 export default function Contact() {
     return (
         <main>
-            <section id='contact-header' className='mx-auto bg-offwhite lg:px-40 md:px-30 sm:px-20'>
-                <div className='relative h-[35vh] min-h-[300px] md:h-[70vh] overflow-hidden px-4'>
-                    {/* Layer 1: background image */}
-                    <Image
-                        src='/on-desk.jpg'
-                        alt='Crestmore Productions Co-Directors'
-                        fill
-                        priority
-                        className='object-cover object-[50%_34%] md:object-[50%_35%] opacity-50'
-                        />
-        
-                    {/* Header Text */}
-                    <div className='absolute top-11/16 left-1/2 transform -translate-x-1/2  text-center text-navy'>
-                        <h1 className='md:text-8xl whitespace-nowrap'>Contact Us</h1>
-                    </div>
+            <section id='contact-page' className='py-10 md:py-20'>
+                {/* Header */}
+                <div className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center'>
+                  <h1 className='text-navy text-center'>Contact Us</h1>
+                  {/* Border Line */}
+                  <div className='w-full border-b border-offblack mt-10 mb-10' />
                 </div>
-            </section>
+                {/* Header Image */}
+            {/*    <div className='mx-auto bg-offwhite lg:px-40 md:px-30 sm:px-20'>
+                    <div className='relative h-[35vh] min-h-[300px] md:h-[70vh] overflow-hidden px-4'>
+                        {/* Layer 1: background image 
+                        <Image
+                            src='/on-desk.jpg'
+                            alt='Crestmore Productions Co-Directors'
+                            fill
+                            priority
+                            className='object-cover object-[50%_34%] md:object-[50%_35%] opacity-50'
+                        />
+            
+                    </div>
+                </div> */}
 
+                {/* Chloe and Shaira Blurb */}
+                <div className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center mt-10 mb-20 px-4'>
+                    <AboutCard
+                        name=''
+                        role='Creators of Crestmore Admissions'
+                        imageSrc="/on-desk.jpg"
+                        aboutTitle='Get in Touch'
+                        paragraphs={[
+                            "Chloe and Shaira are active collaborators open to projects of all kinds. To get in touch with them please visit their Linkedin profiles."
+                        ]}
+                        iconLinks={[...chloeIconLinks, ...shairaIconLinks]}
+                    />
+                </div>
+            
             {/* Main Section */}
-            <section id='contact-main' className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center'>
-                {/* Border Line */}
-                <div className='w-full border-b border-offblack mt-10' />
+            <div className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center'>
 
-
-                <div className='w-full py-20'>
-                    {/* Headers */}
-                    <h2 className='text-offblack text-center mb-20'>Stay in the Loop!</h2>
-                    <h3 className='text-navy text-center mb-5'>Follow Us on Social Media</h3>
+                {/* Follow Us Section */}
+                <div className='w-full pb-20'>
+                    <h2 className='text-navy text-center m-5'>Follow Us on Social Media</h2>
 
                     {/* Social Media Info */}
                     <div className='flex flex-col items-center gap-6 md:flex-row md:justify-center'>
@@ -78,6 +96,7 @@ export default function Contact() {
                 {/* Bottom Border Line */}
                 <div className='w-full border-t border-offblack pb-10'></div>
                 
+            </div>
             </section>
         </main>
     );

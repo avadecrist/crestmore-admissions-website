@@ -43,9 +43,9 @@ export default function Home() {
           </div>
 
           <div className='w-full text-offblack mb-10'>
-            <p>Working at <em>Crestmore Admissions</em> means being a punching bag for angry parents, 
-            confused freshmen, and ridiculous policies. Although it's supposed to be a mindless 
-            student job, the emotional labor is real, and it's slowly breaking them.</p>
+            <p>Working at <b>Crestmore Admissions</b> means being a punching bag for confused prospective 
+            students and angry parents. Although it's <em>supposed</em> to be a mindless student job, 
+            the emotional labor is real, and it's slowly breaking them...</p>
           </div>
 
         {/* Buttons */}
@@ -100,7 +100,7 @@ export default function Home() {
       <section id='episodes' tabIndex={-1} className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10'> 
         <div className='w-full border-b border-offblack pb-6 text-center'>
           <h2 className='text-navy'>Episodes</h2>
-          <p className='text-offblack mt-2'>New episodes will drop every Friday, beginning February 27, 2026!</p>
+          <p className='text-offblack mt-2'>Episodes will drop every Friday, starting February 27th!</p>
         </div>
 
         {/* Placeholder timer before adding episodes */}
