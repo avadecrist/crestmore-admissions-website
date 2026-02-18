@@ -3,6 +3,7 @@
 import { navigateToSection } from './lib/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { GoPlay } from "react-icons/go";
 import TimerSection from './_ui/components/temp-timer-section';
 import { useEffect } from 'react';
 import DonateSection from './_ui/components/donate-section';
@@ -33,9 +34,9 @@ export default function Home() {
   <>
     {/* Hero Section */}
     <section id='hero' tabIndex={-1} className='py-10 md:py-20 bg-offwhite'>
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-12 md:flex-row md:gap-6 md:px-10'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-12 lg:flex-row md:gap-8 md:px-10'>
         {/* LEFT COLUMN */}
-        <div className='w-full md:w-1/2 text-center'>
+        <div className='w-full lg:w-1/2 text-center'>
 
           <div className='mt-6'>
             <h1 className='text-navy'>Crestmore Admissions</h1>
@@ -49,23 +50,17 @@ export default function Home() {
 
         {/* Buttons */}
           <div className='mt-6 flex justify-center'>
-            <div className='flex flex-row gap-6'>
+            <div className='flex w-full max-w-sm gap-6'>
               <button
                 type='button'
                 onClick={scrollToEpisodes}
-                className='flex h-12 w-full whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy px-6 text-offwhite transition-all duration-200 hover:bg-navy/[0.8] hover:scale-105 md:w-[158px]'
+                className='flex-1 flex h-12 w-full px-6 whitespace-nowrap items-center justify-center gap-2 rounded-lg bg-navy text-offwhite transition-all duration-200 hover:bg-navy/[0.8] hover:scale-105 md:w-[158px]'
               >
                 Listen Now
-              <Image
-                className='brightness-0 invert '
-                src='/play.svg'
-                alt='Play Icon'
-                width={24}
-                height={24}
-              />
+              <GoPlay className='text-offwhite h-5 w-5' />
               </button>
               <Link
-                className='flex h-12 w-full items-center justify-center rounded-lg border border-solid border-foreground/[.08] px-6 text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-foreground/[.04] md:w-[158px]'
+                className='flex-1 flex h-12 w-full px-6 items-center justify-center rounded-lg border border-solid border-foreground/[.08] text-navy transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-foreground/[.04] md:w-[158px]'
                 href='/contact'
               >
                 Follow Us

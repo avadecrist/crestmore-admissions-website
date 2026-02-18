@@ -35,7 +35,7 @@ export default function AboutCard({
 
           {/* LEFT: Navy panel */}
           <div className={`relative bg-navy dark:bg-[#314D82] px-10 py-10 ${isSwapped ? 'md:order-2' : 'md:order-1'}`}>
-            <div className='text-offwhite'>
+            <div className='text-beige'>
               <h3 className='tracking-wide text-center'>{name.toUpperCase()}</h3>
               <p className='mt-2 text-[10px] font-medium tracking-[0.25em] opacity-80'>
                 {role.toUpperCase()}

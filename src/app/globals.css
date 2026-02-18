@@ -32,8 +32,9 @@ html.dark {
   --foreground: #F1F1F1;
   --offWhite: #1A1D24;
   --offBlack: #E8E8E8;
-  --primary: #314D82;
-  --secondary: #f4f4f4;
+  /* --primary: #314D82; */
+  --primary: #EDE8D0;
+  --secondary: #314D82;
   }
 
 

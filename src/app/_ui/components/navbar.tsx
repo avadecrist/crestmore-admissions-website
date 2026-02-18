@@ -15,11 +15,11 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur`}>
       {/* toggle pinned to top-right for DESKTOP*/}
-      <div className="absolute right-1 top-1 z-60 p-1 hidden md:block">
+      <div className="absolute right-2 top-2 z-60 p-1 hidden md:block">
         <ThemeToggle />
       </div>
 
-      <nav className={`font-serif mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6`}>
+      <nav className={`font-serif mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8`}>
         {/* Logo */}
         <Link 
           href='/#hero'
