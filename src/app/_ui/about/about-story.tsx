@@ -6,22 +6,29 @@ export default function AboutStory() {
       number: 1,
       title: "Our Idea",
       description:
-        "We had to pitch an idea for an original audio drama in class — I asked Shaira how much she prepared for her pitch and she said what pitch and I was like girl we’re pitching today and so we needed to come up with a last minute idea for her so I said pitch a comedy about us at work taking calls and doing interviews.",
+        "When taking Michael Weiss’s “Writing for Evolving Platforms” class, Chloe and Shaira were required to pitch an original audio fiction idea. When brainstorming, Chloe and Shaira couldn’t help but reminisce on their wacky workplace stories at their campus job. On the fly, they decided to pitch it as a comedy series and the reaction was nothing but positive!",
       rightSide: false,
     },
     {
       number: 2,
       title: "Scripts",
       description:
-        "We were on a tight timeline which motivated us. We each wrote three episodes and table read the pilot in our class for feedback and it got a great reaction.",
+        "With Shaira’s departure to Spain for her semester abroad and Chloe’s impending graduation date, the pair decided they had to act fast. They worked together, each writing three episodes of the six episode season, over the course of only three weeks before entering production.",
       rightSide: true,
     },
     {
       number: 3,
       title: "Recordings",
       description:
-        "Recording was awesome! We did two 8 hour days and each directed our own episodes. It was fun to hear the lines come to life. One highlight was recording ad libs and having our cast improv some stuff.",
+        "Recording the episodes was made possible by the Dodge College of Film and Media Arts! Over the course of two eight-hour days, Chloe and Shaira co-directed all six episodes in ADR suites with the help of their friends and classmates as voice actors.",
       rightSide: false,
+    },
+    {
+      number: 4,
+      title: "Editing",
+      description:
+        "The editing process brought everything together! With the hard work of sound designer and editor, Ashley Uhrig, Chloe was able to review multiple cuts of the episodes, various sound effects, and music options in order to finalize and polish the episodes for distribution!",
+      rightSide: true,
     },
   ];
 

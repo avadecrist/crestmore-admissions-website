@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* toggle pinned to bottom-right for MOBILE */}
-        <div className="absolute right-4 bottom-2 z-60 p-2 md:hidden">
+        <div className='absolute right-4 bottom-0 z-60 p-2 md:hidden'>
           <ThemeToggle />
         </div>
 

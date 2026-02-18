@@ -7,7 +7,7 @@ export default function AboutHeader() {
             <div className='relative h-[35vh] min-h-[300px] md:h-[70vh] overflow-hidden px-4'>
             {/* Layer 1: background image */}
                 <Image
-                src='/meet-creators.JPG'
+                src='/about-us.jpg'
                 alt='Crestmore Productions'
                 fill
                 priority

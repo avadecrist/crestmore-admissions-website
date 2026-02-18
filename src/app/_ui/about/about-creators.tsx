@@ -20,7 +20,7 @@ export default function AboutCreators() {
             
             <div className='relative h-[35vh] min-h-[350px] md:h-[100vh] overflow-hidden px-4'>
                 <Image
-                    src='/creators-smiling.JPG'
+                    src='/chloe-shaira-bio.jpg'
                     alt='Crestmore Productions'
                     fill
                     priority
@@ -53,30 +53,60 @@ export default function AboutCreators() {
                 <h2 className='relative z-10 text-center text-navy tracking-wide'>
                     MEET THE CREATORS
                 </h2>
+
+            </div>
+
+            <div className='w-full mx-auto text-start text-offblack flex flex-col gap-5 pb-15 px-10 md:px-20 lg:px-40'>
+                <p>
+                        Chloe and Shaira met working at their on-campus jobs at Chapman University and hit it 
+                        off immediately! Both being screenwriters, they took Michael Weiss’s “Writing for Evolving 
+                        Platforms” course where they were introduced to Audio Fiction, specifically “The Bright 
+                        Sessions” written by Lauren Shippen. With many fun anecdotes from their on-campus jobs 
+                        they decided to team up to create Crestmore Admissions, an original comedy Audio Fiction 
+                        show.
+                </p>
+                <p>
+                    They co-wrote and co-directed all 6 episodes of season one and recruited their friends 
+                    and classmates to bring it to life in the studio. The show is produced by Chloe and sound 
+                    designed by Ashley Uhrig, whom Chloe met through the Chapman Women in Film Club. As writers,                         Chloe and Shaira wanted to get their work off the page in a low-budget accessible way using 
+                    their university resources, and here we are!
+                </p>
             </div>
 
             {/* CREATOR CARDS */}
             <AboutCard
-                name='Chloe Avant & Shaira Yousuf'
-                role='Producer / Co-Directors & Co-Writers'
-                imageSrc='/chloe-shaira-bio.JPG'
-                aboutTitle='About Chloe and Shaira'
+                name='Chloe Avant'
+                role='Co-Writer / Co-Director / Producer'
+                imageSrc='/chloe-bio.webp'
+                aboutTitle='About Chloe'
                 paragraphs={[
-                    'Chloe and Shaira met working at their on-campus jobs at Chapman University and hit it off immediately! Both being screenwriters, they took Michael Weiss’s “Writing for Evolving Platforms” course where they were introduced to Audio Fiction, specifically “The Bright Sessions” written by Lauren Shippen. With many fun anecdotes from their on-campus jobs they decided to team up to create Crestmore Admissions, an original comedy Audio Fiction show.',
-                    'They co-wrote and co-directed all 6 episodes of season one and recruited their friends and classmates to bring it to life in the studio. The show is produced by Chloe and sound designed by Ashley Uhrig, whom Chloe met through the Chapman Women in Film Club. As writers, Chloe and Shaira wanted to get their work off the page in a low-budget accessible way using their university resources, and here we are!',
+                    'Chloe is a screenwriter, director, and producer originally from Denver, Colorado with a passion for dark-comedy and coming-of-age storeis.',
+                    'She holds a BFA in Writing for Film and Television from Chapman University’s Dodge College in Film and Media Arts and is pursuing a career in Film and Television Development in Los Angeles, California.',
                 ]}
-                iconLinks={[...chloeIconLinks, ...shairaIconLinks]}
+                iconLinks={chloeIconLinks}
+            />
+            <AboutCard
+                name='Shaira Yousuf'
+                role='Co-Writer / Co-Director'
+                imageSrc='/shaira-bio.webp'
+                aboutTitle='About Shaira'
+                paragraphs={[
+                    'Shaira is a senior Screenwriting major at Chapman University’s Dodge College of Film and Media Arts, with a Creative and Cultural Industries minor.',
+                    'She is passionate about using storytelling as a force for social change, bringing untold narratives to life through empathy, creativity, and a sense of purpose.',
+                    'Shaira hopes to graduate college and work in Hollywood in creative development and continue writing.',
+                ]}
+                iconLinks={shairaIconLinks}
+                variant='swapped'
             />
             <AboutCard
                 name='Ashley Uhrig'
                 role='Sound Designer'
-                imageSrc='/ashley-bio.jpg'
+                imageSrc='/ashley-bio.webp'
                 aboutTitle='About Ashley'
                 paragraphs={[
                     'Ashley Jae Uhrig is a film student originally from Moscow, Idaho. She is currently pursuing a degree in Creative Producing at Chapman University’s Dodge College of Film and Media Arts. She specializes in post-production/editing but enjoys all aspects of film production.',
                 ]}
                 iconLinks={ashleyIconLinks}
-                variant='swapped'
             />
 
             {/* DONATE SECTION */}

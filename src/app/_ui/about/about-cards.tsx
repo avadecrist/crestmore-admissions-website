@@ -29,7 +29,7 @@ export default function AboutCard({
     const isSwapped = variant === 'swapped';
 
   return (
-    <section className='mx-auto w-full max-w-5xl pb-20'>
+    <section className='mx-auto w-full max-w-3xl pb-20'>
       <div className='overflow-hidden bg-white shadow-[0_18px_40px_rgba(0,0,0,0.18)]'>
         <div className='grid grid-cols-1 md:grid-cols-2'>
 
@@ -58,15 +58,15 @@ export default function AboutCard({
 
             {/* Icon Link(s) */}
             {iconLinks && iconLinks.length > 0 && (
-                <div className="mt-2 space-y-2">
+                <div className='mt-2 space-y-2'>
                     {iconLinks.map((link) => (
                         <IconLink
                             key={link.href}
                             href={link.href}
                             iconKey={link.iconKey}
                             label={link.label}
-                            variant="labeled"
-                            className="text-beige"
+                            variant='labeled'
+                            className='text-beige'
                         />
                     ))}
                 </div>
