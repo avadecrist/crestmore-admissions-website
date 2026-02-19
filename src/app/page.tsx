@@ -43,7 +43,7 @@ export default function Home() {
           </div>
 
           <div className='w-full text-offblack mb-10'>
-            <p>Working at <b>Crestmore Admissions</b> means being a punching bag for confused prospective 
+            <p>For Lucy and Sam, working at <b>Crestmore Admissions</b> means being a punching bag for confused prospective 
             students and angry parents. Although it's <em>supposed</em> to be a mindless student job, 
             the emotional labor is real, and it's slowly breaking them...</p>
           </div>

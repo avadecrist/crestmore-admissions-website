@@ -100,7 +100,7 @@ export default function AboutCreators() {
             />
             <AboutCard
                 name='Ashley Uhrig'
-                role='Sound Designer'
+                role='Editor / Sound Designer'
                 imageSrc='/ashley-bio.webp'
                 aboutTitle='About Ashley'
                 paragraphs={[

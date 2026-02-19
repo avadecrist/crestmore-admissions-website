@@ -11,9 +11,9 @@ export default function DonateSection() {
           </h3>
           
           <p className='mt-4 text-offblack text-sm'>
-            Any contribution, big or small, makes a difference and allows us to continue creating 
-            Crestmore Admissions! Thank you for being a part of the Crestmore family and for 
-            helping us keep the mics on.
+            This original audio fiction comedy series was made entirely by students. 
+            Your support helps cover production fees, hosting fees, licensing, and makes 
+            it possible for young creators to continue creating!
           </p>
 
           <Link
