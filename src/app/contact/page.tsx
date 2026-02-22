@@ -9,7 +9,7 @@ import {
   instaIconLinks,
   shairaIconLinks,
   tiktokIconLinks,
-} from '@/app/data/social-links';
+} from '@/app/_data/social-links';
 
 
 export const metadata: Metadata = {

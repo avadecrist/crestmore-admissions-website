@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import IconLink from '../socials/icon';
-import { SocialMediaData } from '@/app/data/social-links';
+import { SocialMediaData } from '@/app/_data/social-links';
 
 type AboutCardProps = {
   name: string;

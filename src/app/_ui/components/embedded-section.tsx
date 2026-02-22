@@ -1,6 +1,6 @@
 
 import type { ReactNode } from 'react';
-import { SocialMediaData } from '@/app/data/social-links';
+import { SocialMediaData } from '@/app/_data/social-links';
 import IconLink from '../socials/icon';
 
 type EmbeddedSectionProps = {

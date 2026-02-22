@@ -6,7 +6,7 @@ import { useState } from 'react';
 import NavLinks from './nav-links';
 import ThemeToggle from './toggle-theme';
 import CountdownTimer from './countdown-timer';
-import { navigateToSection } from '@/app/lib/navigation';
+import { navigateToSection } from '@/app/_lib/navigation';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

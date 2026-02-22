@@ -1,12 +1,13 @@
 'use client';
 // import type { Metadata } from "next";
-import { navigateToSection } from './lib/navigation';
+import { navigateToSection } from './_lib/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoPlay } from "react-icons/go";
 import TimerSection from './_ui/components/temp-timer-section';
 import { useEffect } from 'react';
 import DonateSection from './_ui/components/donate-section';
+import EpisodesSection from './_ui/episodes/episodes-section';
 
 // export const metadata: Metadata = {
 //   title: "Crestmore Admissions Podcast",
@@ -103,8 +104,9 @@ export default function Home() {
           <p className='text-offblack mt-2'>Episodes will drop every Friday, starting February 27th!</p>
         </div>
 
-        {/* Placeholder timer before adding episodes */}
+        {/* Episodes List Component will go here */}
         <TimerSection />
+        {/* <EpisodesSection /> */}
         
       </section>
 

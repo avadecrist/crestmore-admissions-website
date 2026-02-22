@@ -1,5 +1,5 @@
 'use client';
-import { navigateToSection } from '@/app/lib/navigation';
+import { navigateToSection } from '@/app/_lib/navigation';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
