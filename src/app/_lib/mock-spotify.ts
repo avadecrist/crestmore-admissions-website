@@ -17,9 +17,9 @@ export const mockEpisodes: SpotifyEpisodeData[] = [
   },
   {
     id: "test2",
-    name: "Episode Title Goes Here: Dream School Name",
+    name: "Short Ep Title",
     description:
-        "mock description text goes here. Add a longer paragraph here to test line wrapping/spacing/truncation behavior. You can also test special characters.",
+        "mock description text goes here. Testing a short paragraph.",
     release_date: "2026-03-06",
     external_urls: { spotify: "https://open.spotify.com" },
     images: [
