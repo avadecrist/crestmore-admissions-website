@@ -100,3 +100,14 @@ export const ashley: CastMember = {
   paragraphs: [],
   iconLinks: larsIconLinks,
 };
+
+export const nora: CastMember = {
+  id: 'nora',
+  name: 'Nora Anderson',
+  role: 'Emily',
+  hometown: 'Los Angeles, California',
+  major: 'Writing for Film & Television',
+  imageSrc: '/ashley-bio.webp',
+  paragraphs: [],
+  iconLinks: larsIconLinks,
+};

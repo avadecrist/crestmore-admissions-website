@@ -1,5 +1,5 @@
 'use client';
-
+import { useState, useEffect } from 'react';
 import { useTimer } from 'react-timer-hook';
 import { FaPhone } from 'react-icons/fa6';
 
@@ -20,7 +20,15 @@ export default function CountdownTimer({ expiryTimestamp, variant = 'default', }
     autoStart: true,
   });
 
+  // mounted guard for server and client load times
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+
   const isSmall = variant === 'small';
+
 
   return (
     <div className={`relative flex z-10 items-start group

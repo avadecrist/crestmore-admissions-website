@@ -1,5 +1,5 @@
 // /_data/episode-extras.ts
-import { chloe, shaira, nick, lauren, sebastian, ethan, lars, sophia, ashley } from './cast';
+import { chloe, shaira, nick, lauren, nora, sebastian, ethan, lars, sophia, ashley } from './cast';
 import { EpisodeExtras } from '../_types/episode';
 
 export const episodeExtrasByDate: Record<string, EpisodeExtras> = {
@@ -9,7 +9,7 @@ export const episodeExtrasByDate: Record<string, EpisodeExtras> = {
     customLongDescription: 'description'
   },
   '2026-03-06': {
-    cast: [chloe, shaira, sebastian],
+    cast: [chloe, shaira, nora, sebastian],
     transcriptPath: '/content/transcripts/spotifyEpisodeIdHere.md',
     customLongDescription: 'description'
   },
