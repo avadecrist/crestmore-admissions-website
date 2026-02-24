@@ -1,17 +1,9 @@
 // will contain Episodes List to import in homepage
 
 import { SpotifyEpisodeData } from '@/app/_lib/spotify';
-import { truncate } from '@/app/_lib/text';
+import { truncate, formatDate } from '@/app/_lib/text';
 import Link from 'next/link';
 import Image from 'next/image';
-
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
 
 export default function EpisodesSection({
   episodes,
@@ -42,7 +34,7 @@ export default function EpisodesSection({
 
             {/* Cover + title/date row */}
             <div className='mt-6 flex items-start gap-6'>
-                {/* Cover (fixed size like mock) */}
+                {/* Cover */}
                 <div className='relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-offblack/5'>
                 {imageUrl && (
                     <Image
@@ -76,7 +68,7 @@ export default function EpisodesSection({
             </div>
             </Link>
 
-            {/* Description (centered like mock) */}
+            {/* Description */}
             <p className='mx-auto mt-8 max-w-sm md:max-w-xl text-offblack/70'>
             {truncate(ep.description, 140)}
             </p>

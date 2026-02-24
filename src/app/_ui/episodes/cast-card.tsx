@@ -44,7 +44,7 @@ export default function CastCard({
         <div className='flex w-full flex-1 flex-col'>
 
           {/* NAME as CHARACTER */}
-          <h2 className='text-3xl md:text-5xl text-navy tracking-wide'>
+          <h2 className='text-3xl text-navy tracking-wide'>
             {name}
             {role && (
               <span className='ml-4 font-normal text-navy/70'>

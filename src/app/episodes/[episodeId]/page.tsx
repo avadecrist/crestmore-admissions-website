@@ -1,12 +1,22 @@
 // Isolated Episode Page
-import CastCard from "../../_ui/episodes/cast-card";
-import {
-  nickIconLinks,
-} from '@/app/_data/social-links';
+/* responsibilities: 
+  fetch spotify episode data
+  compute episode number
+  get extras by date (cast + transcript path)
+  pass cast → MeetCast
+  pass spotify/youtube links → LinksSection (if needed)
+  pass transcript + prev/next ids → PrevNextNav
+*/
+
 import { Metadata } from "next";
 import { mockEpisodes } from "@/app/_lib/mock-spotify"; // for testing
-import { getEpisodeById } from "@/app/_lib/spotify";
+import { getEpisodeById, getEpisodes } from "@/app/_lib/spotify";
 import { truncate } from "@/app/_lib/text";
+import { toISODateKey } from "@/app/_lib/dates";
+import { episodeExtrasByDate } from "@/app/_data/episode-extras";
+import EpisodeHero from "@/app/_ui/episodes/episode-hero";
+import MeetCast from "@/app/_ui/episodes/meet-cast";
+import PrevNextNav from "@/app/_ui/episodes/prev-next-nav";
 import Image from "next/image";
 
 // note: recommended for Spotify Data
@@ -60,39 +70,66 @@ export default async function EpisodePage({
   const { episodeId } = await params;
   const episode = await getEpisodeData(episodeId);
 
-  
+  // Normalize date to access episode extras data
+  const releaseKey = toISODateKey(episode.release_date);
+  const extras = episodeExtrasByDate[releaseKey];
+
+  // Handle missing extras (helpful for UI testing without transcripts)
+  const cast = extras?.cast ?? [];
+  const transcriptPath = extras?.transcriptPath ?? null;
+
+  // Get episode number
+  const list = USE_MOCK ? mockEpisodes : (await getEpisodes({ showId: process.env.SPOTIFY_SHOW_ID! })).items;
+
+  const sorted = [...list].sort(
+    (a, b) => new Date(b.release_date).getTime() - new Date(a.release_date).getTime()
+  );
+
+  const idx = sorted.findIndex((e) => e.id === episode.id);
+  const episodeNumber = idx >= 0 ? sorted.length - idx : undefined;
+  // Prev and Next epsiode object
+  const prevEpisode = idx >= 0 && idx + 1 < sorted.length ? sorted[idx + 1] : null; // older
+  const nextEpisode = idx > 0 ? sorted[idx - 1] : null; // newer
+  // Convert prev and next epsiode object into EpisodeNavItem for PrevNextNav component
+  const prev = prevEpisode ? { id: prevEpisode.id, label: prevEpisode.name } : undefined;
+  const next = nextEpisode ? { id: nextEpisode.id, label: nextEpisode.name } : undefined;
+
+  // EpisodeHero Props
+  const spotifyHref = episode.external_urls.spotify;
+  const spotifyEmbedSrc = `https://open.spotify.com/embed/episode/${episode.id}`;
 
     return (
+
+  /*
+      <LinksSection />
+
+      <PrevNextNav
+        transcriptPath={transcriptPath}
+        prev={prev}
+        next={next}
+      />
+   */
+  <>
       <section className="mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-3xl font-serif text-navy">
-          {episode.name}
-        </h1>
-
-        {episode.images?.[0]?.url && (
-          <div className="relative mt-6 h-60 w-60">
-            <Image
-              src={episode.images[0].url}
-              alt={episode.name}
-              fill
-              sizes="240px"
-              className="object-cover"
-            />
-          </div>
-        )}
-
-        <p className="mt-6 text-black/80">
-          {episode.description}
-        </p>
-
-        {/* Spotify Button */}
-        <a
-          href={episode.external_urls.spotify}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-block rounded bg-green-600 px-6 py-3 text-white hover:bg-green-700"
-        >
-          Listen on Spotify
-        </a>
+        <EpisodeHero 
+        episodeNumber={episodeNumber}
+        title={episode.name}
+        releaseDateISO={episode.release_date}
+        description={episode.description}
+        spotifyHref={spotifyHref}
+        spotifyEmbedSrc={spotifyEmbedSrc}
+        />
       </section>
+
+      <section className="py-10 md:py-20 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
+        <MeetCast castMembers={cast} />
+      </section>
+
+      <PrevNextNav
+        transcriptPath={transcriptPath}
+        prev={prev}
+        next={next}
+      />
+  </>
     );
 }

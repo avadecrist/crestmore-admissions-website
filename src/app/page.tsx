@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getEpisodes } from './_lib/spotify';
 import { mockEpisodes } from "./_lib/mock-spotify";
-import type { SpotifyEpisodesResponse } from './_lib/spotify';
 import HomeClient from "./_ui/home/home-client";
 
 export const metadata: Metadata = {
@@ -15,13 +14,10 @@ export default async function Home() {
 
   // For fetching released episodes for Episodes Section
   const showId = "3IM0lmZxpFAY7CwMuv9H4g"; //replace with actual show_id
-  
-  // const episodes: SpotifyEpisodesResponse = await getEpisodes({ showId });
-  const episodes = USE_MOCK
-  ? mockEpisodes
-  : (await getEpisodes({ showId })).items;
 
-  // return <HomeClient episodes={episodes.items} />;
+  // const episodes = await getEpisodes({ showId }).items;
+  const episodes = USE_MOCK ? mockEpisodes : (await getEpisodes({ showId })).items;
+
   return <HomeClient episodes={episodes} />;
 }
 

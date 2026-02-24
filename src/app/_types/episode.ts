@@ -19,5 +19,9 @@ export type CastMember = {
 export type EpisodeExtras = {
   cast?: CastMember[];
   transcriptPath?: string; 
-  customLongDescription?: string;
+};
+
+export type EpisodeNavItem = {
+  id: string;
+  label: string;
 };
