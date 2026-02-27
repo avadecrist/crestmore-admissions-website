@@ -1,13 +1,13 @@
 'use client';
 import Image from 'next/image'; 
 import AboutCard from './about-cards';
-import { useIsDarkMode } from '@/app/lib/useIsDarkMode';
+import { useIsDarkMode } from '@/app/_lib/useIsDarkMode';
 
 import {
   chloeIconLinks,
   shairaIconLinks,
   ashleyIconLinks,
-} from '@/app/data/social-links';
+} from '@/app/_data/social-links';
 
 export default function AboutCreators() {
     const isDark = useIsDarkMode();

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import IconLink from '../socials/icon';
-import { SocialMediaData } from '@/app/data/social-links';
+import { SocialMediaData } from '@/app/_data/social-links';
 
 type AboutCardProps = {
   name: string;
@@ -51,6 +51,7 @@ export default function AboutCard({
                   fill
                   className='object-cover'
                   sizes='(max-width: 768px) 100vw, 50vw'
+                  quality={90}
                   priority
                 />
               </div>

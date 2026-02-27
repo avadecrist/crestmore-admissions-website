@@ -1,6 +1,8 @@
+// /_ui/socials/icon.tsx
 import Link from 'next/link';
 import { FaSpotify, FaYoutube, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa';
-import type { SocialIconKey } from '@/app/data/social-links';
+import { IoIosMail } from "react-icons/io";
+import type { SocialIconKey } from '@/app/_data/social-links';
 
 const ICONS: Record<SocialIconKey, React.ComponentType<{ size?: number; className?: string }>> = {
   spotify: FaSpotify,
@@ -8,6 +10,7 @@ const ICONS: Record<SocialIconKey, React.ComponentType<{ size?: number; classNam
   linkedin: FaLinkedin,
   instagram: FaInstagram,
   tiktok: FaTiktok,
+  email: IoIosMail,
 };
 
 type IconLinkVariant = 'icon' | 'labeled';

@@ -1,11 +1,11 @@
 'use client';
-import { useIsDarkMode } from '@/app/lib/useIsDarkMode';
-import { navigateToSection } from '@/app/lib/navigation';
+import { useIsDarkMode } from '@/app/_lib/useIsDarkMode';
+import { navigateToSection } from '@/app/_lib/navigation';
 import ThemeToggle from '../components/toggle-theme';
 import Link from 'next/link';
 import Image from 'next/image';
 import IconLink from '../socials/icon';
-import { spotifyIconLinks, youtubeIconLinks, instaIconLinks, tiktokIconLinks } from '@/app/data/social-links';
+import { spotifyIconLinks, youtubeIconLinks, instaIconLinks, tiktokIconLinks } from '@/app/_data/social-links';
 
 export default function Footer() {
   const isDark = useIsDarkMode();

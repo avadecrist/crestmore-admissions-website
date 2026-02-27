@@ -3,13 +3,14 @@ import Image from 'next/image';
 import EmbeddedSection from '../_ui/components/embedded-section';
 import SocialEmbedFrame from '../_ui/components/social-embed';
 import AboutCard from "../_ui/about/about-cards";
+import LinksSection from "../_ui/episodes/links-section";
 
 import { 
   chloeIconLinks,
   instaIconLinks,
   shairaIconLinks,
   tiktokIconLinks,
-} from '@/app/data/social-links';
+} from '@/app/_data/social-links';
 
 
 export const metadata: Metadata = {
@@ -27,20 +28,6 @@ export default function Contact() {
                   {/* Border Line */}
                   <div className='w-full border-b border-offblack mt-10 mb-10' />
                 </div>
-                {/* Header Image */}
-            {/*    <div className='mx-auto bg-offwhite lg:px-40 md:px-30 sm:px-20'>
-                    <div className='relative h-[35vh] min-h-[300px] md:h-[70vh] overflow-hidden px-4'>
-                        {/* Layer 1: background image 
-                        <Image
-                            src='/on-desk.jpg'
-                            alt='Crestmore Productions Co-Directors'
-                            fill
-                            priority
-                            className='object-cover object-[50%_34%] md:object-[50%_35%] opacity-50'
-                        />
-            
-                    </div>
-                </div> */}
 
                 {/* Chloe and Shaira Blurb */}
                 <div className='mx-auto max-w-sm md:max-w-7xl flex flex-col items-center mt-10 mb-20 px-4'>
@@ -91,7 +78,6 @@ export default function Contact() {
                     </div>
 
                 </div>
-                
 
                 {/* Bottom Border Line */}
                 <div className='w-full border-t border-offblack pb-10'></div>
