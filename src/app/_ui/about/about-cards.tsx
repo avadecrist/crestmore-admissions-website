@@ -51,6 +51,7 @@ export default function AboutCard({
                   fill
                   className='object-cover'
                   sizes='(max-width: 768px) 100vw, 50vw'
+                  quality={90}
                   priority
                 />
               </div>
