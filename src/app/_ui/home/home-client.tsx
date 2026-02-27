@@ -8,12 +8,15 @@ import { navigateToSection } from '@/app/_lib/navigation';
 import TimerSection from '@/app/_ui/components/temp-timer-section';
 import DonateSection from '@/app/_ui/components/donate-section';
 import EpisodesSection from '@/app/_ui/episodes/episodes-section';
+import { useReleaseStatus } from '@/app/_lib/useReleaseStatus';
 
 type HomeClientProps = {
   episodes: SpotifyEpisodeData[]; // replace with your Episode type if you have it
 };
 
 export default function HomeClient({ episodes }: HomeClientProps) {
+
+  const isReleased = useReleaseStatus();
 
   const scrollToEpisodes = () => {
     navigateToSection('episodes');
@@ -98,16 +101,14 @@ export default function HomeClient({ episodes }: HomeClientProps) {
           tabIndex={-1}
           className='mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center scroll-mt-24 pt-10'
         >
-          <div className='w-full border-b border-offblack pb-6 text-center'>
-            <h2 className='text-navy'>Episodes</h2>
-            <p className='text-offblack mt-2'>Episodes will drop every Friday, starting February 27th!</p>
+        
+          <div className="transition-opacity duration-500">
+            { isReleased ? <EpisodesSection episodes={episodes} /> : <TimerSection /> }
           </div>
+          {/* <EpisodesSection episodes={episodes} /> */}
 
-          <TimerSection />
-          <EpisodesSection episodes={episodes} />
         </section>
 
-        <div className='h-[1px] bg-offblack mx-20 md:mx-48 lg:mx-75' />
       </div>
 
       <DonateSection />

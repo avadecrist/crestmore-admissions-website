@@ -7,10 +7,11 @@ import NavLinks from './nav-links';
 import ThemeToggle from './toggle-theme';
 import CountdownTimer from './countdown-timer';
 import { navigateToSection } from '@/app/_lib/navigation';
+import { SHOW_RELEASE_DATE } from '@/app/_lib/constants';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const launchDate = new Date(Date.UTC(2026, 1, 27, 19, 0, 0));
+  // const launchDate = new Date(Date.UTC(2026, 1, 27, 19, 0, 0));
 
   return (
     <header className={`sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur`}>
@@ -41,7 +42,7 @@ export default function Navbar() {
         </Link>
 
         {/* Temp Countdown Timer */}
-        <CountdownTimer expiryTimestamp={launchDate} variant='small'/>
+        <CountdownTimer expiryTimestamp={SHOW_RELEASE_DATE} variant='small'/>
 
         {/* DESKTOP NAV */}
         <div className='hidden items-center gap-6 md:flex'>

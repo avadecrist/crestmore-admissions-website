@@ -24,4 +24,5 @@ export type EpisodeExtras = {
 export type EpisodeNavItem = {
   id: string;
   label: string;
+  number: number;
 };

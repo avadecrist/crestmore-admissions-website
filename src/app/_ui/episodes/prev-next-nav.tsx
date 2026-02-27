@@ -3,7 +3,7 @@
  * prev?: EpisodeNavItem (which has id: string; label: string)
  * next?: EpisodeNavItem (which has id: string; label: string)
  */
-// change styling later, at least props are set up
+
 import Link from "next/link";
 import type { EpisodeNavItem } from "@/app/_types/episode";
 
@@ -19,41 +19,72 @@ export default function PrevNextNav({
     next, 
 }: PrevNextNavProps) {
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 lg:px-8">
-      <div className="flex items-center justify-between gap-4">
-        {/* Prev */}
-        <div>
+    <div className="w-full">
+      {/* Transcript line (top centered) */}
+      <div className="text-center">
+        {transcriptPath ? (
+          <p className="text-sm tracking-wide text-offblack/80">
+            VIEW TRANSCRIPT{" "}
+            <Link
+              href={transcriptPath}
+              className="text-navy underline underline-offset-4 hover:opacity-80"
+            >
+              HERE
+            </Link>
+          </p>
+        ) : (
+          <p className="text-sm tracking-wide text-offblack/50">
+            TRANSCRIPT COMING SOON
+          </p>
+        )}
+      </div>
+
+      {/* Prev / Next row */}
+      <div className="mt-14 flex items-start justify-between gap-10">
+        {/* PREVIOUS */}
+        <div className="min-w-0">
+          <p className="text-xs tracking-widest text-offblack/70">PREVIOUS</p>
+
           {prev ? (
-            <Link href={`/episodes/${prev.id}`} className="text-navy hover:underline">
-              ← {prev.label}
+            <Link
+              href={`/episodes/${prev.id}`}
+              className={[
+                "group mt-4 inline-block",
+                "transition-transform duration-200 hover:-translate-y-1",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/60",
+              ].join(" ")}
+            >
+              <span className="text-lg font-serif text-navy group-hover:underline underline-offset-4">
+                EPISODE {prev.number} | {prev.label}
+              </span>
             </Link>
           ) : (
-            <span />
+            <span className="mt-4 block text-lg text-offblack/30">—</span>
           )}
         </div>
 
-        {/* Transcript */}
-        <div>
-          {transcriptPath ? (
-            <Link href={transcriptPath} className="text-offblack hover:underline">
-              VIEW TRANSCRIPT
-            </Link>
-          ) : (
-            <span className="text-offblack/50">TRANSCRIPT COMING SOON</span>
-          )}
-        </div>
+        {/* NEXT */}
+        <div className="min-w-0 text-right">
+          <p className="text-xs tracking-widest text-offblack/70">NEXT</p>
 
-        {/* Next */}
-        <div className="text-right">
           {next ? (
-            <Link href={`/episodes/${next.id}`} className="text-navy hover:underline">
-              {next.label} →
+            <Link
+              href={`/episodes/${next.id}`}
+              className={[
+                "group mt-4 inline-block",
+                "transition-transform duration-200 hover:-translate-y-1",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/60",
+              ].join(" ")}
+            >
+              <span className="text-lg text-navy group-hover:underline underline-offset-4">
+                EPISODE {next.number} | {next.label}
+              </span>
             </Link>
           ) : (
-            <span />
+            <span className="mt-4 block text-lg text-offblack/30">—</span>
           )}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

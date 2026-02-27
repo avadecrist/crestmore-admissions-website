@@ -36,6 +36,7 @@ export default function CastCard({
             alt={imageAlt}
             fill
             sizes='(max-width: 768px) 220px, 260px'
+            quality={80}
             className='object-cover'
           />
         </div>
@@ -48,7 +49,7 @@ export default function CastCard({
             {name}
             {role && (
               <span className='ml-4 font-normal text-navy/70'>
-                as {role}
+              as {role}
               </span>
             )}
           </h2>

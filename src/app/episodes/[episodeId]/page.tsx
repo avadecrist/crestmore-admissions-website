@@ -14,9 +14,11 @@ import { getEpisodeById, getEpisodes } from "@/app/_lib/spotify";
 import { truncate } from "@/app/_lib/text";
 import { toISODateKey } from "@/app/_lib/dates";
 import { episodeExtrasByDate } from "@/app/_data/episode-extras";
+import { showId } from "@/app/_lib/constants";
 import EpisodeHero from "@/app/_ui/episodes/episode-hero";
 import MeetCast from "@/app/_ui/episodes/meet-cast";
 import PrevNextNav from "@/app/_ui/episodes/prev-next-nav";
+import LinksSection from "@/app/_ui/episodes/links-section";
 import Image from "next/image";
 
 // note: recommended for Spotify Data
@@ -74,41 +76,37 @@ export default async function EpisodePage({
   const releaseKey = toISODateKey(episode.release_date);
   const extras = episodeExtrasByDate[releaseKey];
 
+  // SET UP PROPS FOR COMPONENTS
   // Handle missing extras (helpful for UI testing without transcripts)
   const cast = extras?.cast ?? [];
   const transcriptPath = extras?.transcriptPath ?? null;
 
-  // Get episode number
-  const list = USE_MOCK ? mockEpisodes : (await getEpisodes({ showId: process.env.SPOTIFY_SHOW_ID! })).items;
+  const list = USE_MOCK ? mockEpisodes : (await getEpisodes({ showId })).items;
 
   const sorted = [...list].sort(
     (a, b) => new Date(b.release_date).getTime() - new Date(a.release_date).getTime()
   );
 
+  // Get episode number
   const idx = sorted.findIndex((e) => e.id === episode.id);
   const episodeNumber = idx >= 0 ? sorted.length - idx : undefined;
+
+  // helper to pass episode # to PrevNextNav
+  const numberFromIndex = (i: number) => sorted.length - i;
+
   // Prev and Next epsiode object
-  const prevEpisode = idx >= 0 && idx + 1 < sorted.length ? sorted[idx + 1] : null; // older
-  const nextEpisode = idx > 0 ? sorted[idx - 1] : null; // newer
+  const prevEpisode = idx >= 0 && idx + 1 < sorted.length ? sorted[idx + 1] : null;
+  const nextEpisode = idx > 0 ? sorted[idx - 1] : null;
+
   // Convert prev and next epsiode object into EpisodeNavItem for PrevNextNav component
-  const prev = prevEpisode ? { id: prevEpisode.id, label: prevEpisode.name } : undefined;
-  const next = nextEpisode ? { id: nextEpisode.id, label: nextEpisode.name } : undefined;
+  const prev = prevEpisode ? { id: prevEpisode.id, label: prevEpisode.name, number: numberFromIndex(idx + 1) } : undefined;
+  const next = nextEpisode ? { id: nextEpisode.id, label: nextEpisode.name, number: numberFromIndex(idx - 1) } : undefined;
 
   // EpisodeHero Props
   const spotifyHref = episode.external_urls.spotify;
   const spotifyEmbedSrc = `https://open.spotify.com/embed/episode/${episode.id}`;
 
     return (
-
-  /*
-      <LinksSection />
-
-      <PrevNextNav
-        transcriptPath={transcriptPath}
-        prev={prev}
-        next={next}
-      />
-   */
   <>
       <section className="mx-auto max-w-3xl px-6 py-16">
         <EpisodeHero 
@@ -121,15 +119,17 @@ export default async function EpisodePage({
         />
       </section>
 
-      <section className="py-10 md:py-20 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
+      <section className="py-10 md:py-20 mx-auto max-w-sm md:max-w-7xl px-6 lg:px-8 flex flex-col">
         <MeetCast castMembers={cast} />
-      </section>
 
-      <PrevNextNav
+        <LinksSection />
+
+        <PrevNextNav
         transcriptPath={transcriptPath}
         prev={prev}
         next={next}
-      />
+        />
+      </section>
   </>
     );
 }

@@ -1,7 +1,7 @@
 // /app/_data/cast.ts 
 
 import type { CastMember } from '@/app/_types/episode';
-import { chloeIconLinks, ethanIconLinks, larsIconLinks, laurenIconLinks, nickIconLinks, sebastianIconLinks, shairaIconLinks } from './social-links';
+import { ashleyIconLinks, chloeIconLinks, ethanIconLinks, larsIconLinks, laurenIconLinks, nickIconLinks, noraIconLinks, sebastianIconLinks, shairaIconLinks, sophiaIconLinks } from './social-links';
 
 export const chloe: CastMember = {
   id: 'chloe',
@@ -10,7 +10,9 @@ export const chloe: CastMember = {
   hometown: 'Denver, Colorado',
   major: 'Writing for Film & Television',
   imageSrc: '/chloe-bio.webp',
-  paragraphs: ['customize description'],
+  paragraphs: ['Chloe does it all! Not only did she produce Crestmore Admissions, but she co-wrote, co-directed, and voice acted in it as well!',
+    'Originally from Colorado, Chloe is pursuing a degree in Writing for Film & Television at Chapman University.',
+    ],
   iconLinks: chloeIconLinks,
 };
 
@@ -20,7 +22,9 @@ export const shaira: CastMember = {
   role: 'Sam',
   major: 'Screenwriting',
   imageSrc: '/shaira-bio.webp',
-  paragraphs: ['customize description'],
+  paragraphs: ['Shaira does it all! Not only did she co-wrote and co-direct Crestmore Admissions, but she voice acted in it as well!',
+    'Shaira is pursuing a degree in Screenwriting at Chapman University.',
+    ],
   iconLinks: shairaIconLinks,
 };
 
@@ -30,7 +34,7 @@ export const nick: CastMember = {
   role: 'Ken',
   hometown: 'Boston, Massachusetts',
   major: 'Writing for Film & Television',
-  imageSrc: '/chloe-bio.webp',
+  imageSrc: '/nick-cast.jpg',
   paragraphs: [],
   iconLinks: nickIconLinks,
 };
@@ -41,7 +45,7 @@ export const lauren: CastMember = {
   role: 'Sara',
   hometown: 'San Diego, California',
   major: 'Writing for Film & Television',
-  imageSrc: '/chloe-bio.webp',
+  imageSrc: '/lauren-cast.jpg',
   paragraphs: [],
   iconLinks: laurenIconLinks,
 };
@@ -52,7 +56,7 @@ export const sebastian: CastMember = {
   role: 'John',
   hometown: 'Los Angeles, California',
   major: 'Writing for Film & Television',
-  imageSrc: '/chloe-bio.webp',
+  imageSrc: '/sebastian-cast.jpg',
   paragraphs: [],
   iconLinks: sebastianIconLinks,
 };
@@ -63,7 +67,7 @@ export const ethan: CastMember = {
   role: 'Jake',
   hometown: 'Moorpark, California',
   major: 'Writing for Film & Television',
-  imageSrc: '/chloe-bio.webp',
+  imageSrc: '/ethan-cast.jpg',
   paragraphs: [],
   iconLinks: ethanIconLinks,
 };
@@ -74,7 +78,7 @@ export const lars: CastMember = {
   role: 'Lewis',
   hometown: 'North Carolina',
   major: 'Writing for Film & Television',
-  imageSrc: '/chloe-bio.webp',
+  imageSrc: '/lars-cast.jpg',
   paragraphs: [],
   iconLinks: larsIconLinks,
 };
@@ -85,9 +89,9 @@ export const sophia: CastMember = {
   role: 'Lisa',
   hometown: 'New Jersey',
   major: 'Writing for Film & Television',
-  imageSrc: '/chloe-bio.webp',
+  imageSrc: '/sophia-cast.jpg',
   paragraphs: [],
-  iconLinks: larsIconLinks,
+  iconLinks: sophiaIconLinks,
 };
 
 export const ashley: CastMember = {
@@ -96,9 +100,9 @@ export const ashley: CastMember = {
   role: 'Avery',
   hometown: 'Moscow, Idaho',
   major: 'Creative Producing',
-  imageSrc: '/ashley-bio.webp',
+  imageSrc: '/ashley-cast.jpg',
   paragraphs: [],
-  iconLinks: larsIconLinks,
+  iconLinks: ashleyIconLinks,
 };
 
 export const nora: CastMember = {
@@ -107,7 +111,7 @@ export const nora: CastMember = {
   role: 'Emily',
   hometown: 'Los Angeles, California',
   major: 'Writing for Film & Television',
-  imageSrc: '/ashley-bio.webp',
+  imageSrc: '/nora-cast.jpg',
   paragraphs: [],
-  iconLinks: larsIconLinks,
+  iconLinks: noraIconLinks,
 };

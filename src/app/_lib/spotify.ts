@@ -13,7 +13,7 @@ export type SpotifyEpisodeData = {
   release_date: string;
   external_urls: { spotify: string };
   images?: SpotifyImage[]
-};
+}; 
 
 export type SpotifyEpisodesResponse = {
   items: SpotifyEpisodeData[];
@@ -123,12 +123,36 @@ export async function getEpisodes({
     url.toString()
   );
 
-  const sortedItems = [...data.items].sort((a, b) => {
+  const rawItems = Array.isArray(data.items) ? data.items : [];
+  // DEBUGGING
+  for (const ep of rawItems) {
+    if (
+      !ep ||
+      typeof ep.id !== "string" ||
+      typeof ep.name !== "string" ||
+      typeof ep.release_date !== "string"
+    ) {
+      console.log("Bad episode item from Spotify:", ep);
+    }
+  }
+  // Real episodes
+  const items = rawItems.filter((ep): ep is SpotifyEpisodeData => {
     return (
-      new Date(b.release_date).getTime() -
-      new Date(a.release_date).getTime()
+      ep != null &&
+      typeof ep.id === "string" &&
+      typeof ep.name === "string" &&
+      typeof ep.release_date === "string"
     );
   });
+
+  const toTime = (d: string) => {
+    const t = new Date(d).getTime();
+    return Number.isFinite(t) ? t : 0;
+  };
+
+  const sortedItems = [...items].sort(
+    (a, b) => toTime(b.release_date) - toTime(a.release_date)
+  );
 
   const normalizedItems = sortedItems.map(normalizeEpisode);
 

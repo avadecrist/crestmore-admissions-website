@@ -11,6 +11,12 @@ export default function EpisodesSection({
   episodes: SpotifyEpisodeData[];
 }) {
   return (
+    <>
+    <div className='w-full border-b border-offblack pb-6 text-center'>
+      <h2 className='text-navy'>Episodes</h2>
+      <p className='text-offblack mt-2'>New episodes drop every Friday! Tune in on Spotify for the latest episode.</p>
+    </div>
+
     <div className='mt-12 space-y-16'>
     {episodes.map((ep, idx) => {
         const imageUrl = ep.images?.[0]?.url ?? null;
@@ -22,7 +28,7 @@ export default function EpisodesSection({
             href={`/episodes/${ep.id}`}
             aria-label={`Open episode ${episodeNumber}: ${ep.name}`}
             className={[
-                'group block w-full max-w-sm md:max-w-xl',
+                'group block w-full mx-auto max-w-sm md:max-w-4xl',
                 'transition-transform duration-200 hover:-translate-y-1',
                 'focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/60',
             ].join(' ')}
@@ -33,7 +39,7 @@ export default function EpisodesSection({
             </h2>
 
             {/* Cover + title/date row */}
-            <div className='mt-6 flex items-start gap-6'>
+            <div className='mt-6 flex items-center gap-8'>
                 {/* Cover */}
                 <div className='relative h-24 w-24 shrink-0 overflow-hidden rounded-sm bg-offblack/5'>
                 {imageUrl && (
@@ -57,7 +63,7 @@ export default function EpisodesSection({
                 </div>
 
                 {/* Title + date */}
-                <div className='text-left'>
+                <div className='text-left max-w-sm md:max-w-lg'>
                 <h3 className='text-2xl md:text-3xl leading-snug text-offblack transition group-hover:underline'>
                     {ep.name}
                 </h3>
@@ -79,5 +85,6 @@ export default function EpisodesSection({
         );
     })}
     </div>
+    </>
   );
 }

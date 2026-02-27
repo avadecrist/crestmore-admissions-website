@@ -23,8 +23,8 @@ export default function EpisodeHero({
     
     <header className="w-full">
       {/* Top line: Episode # | Title */}
-      <div className="flex flex-col text-navy">
-        <h1 className="font-semibold leading-tight  text-end md:text-4xl">
+      <div className="flex flex-col items-center text-navy">
+        <h1 className="font-semibold leading-tight text-end md:text-4xl">
           <span className="tracking-wide">
             {episodeNumber ? `EPISODE ${episodeNumber}` : "EPISODE"}
           </span>
