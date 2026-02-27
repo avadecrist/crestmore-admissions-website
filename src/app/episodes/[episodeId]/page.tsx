@@ -27,10 +27,12 @@ export const revalidate = 3600;
 
 //FOR TESTING
 const DESIGN_EPISODE_ID = "6nJNLUs9ttTUdD2ljAsTjT";
-const USE_MOCK = process.env.USE_SPOTIFY_MOCK === "true"; // change to false to verify with real spotify data
+const USE_MOCK = process.env.USE_SPOTIFY_MOCK === "true";
 
 async function getEpisodeData(id: string) {
-  if (USE_MOCK) return mockEpisodes[0]; // test data
+  if (USE_MOCK) {
+    return mockEpisodes.find(e => e.id === id) ?? mockEpisodes[0];
+  } // test data
 
   // allow /episodes/test to render without copying ids
   const resolvedId = id === "test" ? DESIGN_EPISODE_ID : id;
