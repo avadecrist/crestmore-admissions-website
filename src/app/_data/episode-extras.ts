@@ -9,7 +9,7 @@ export const episodeExtrasByDate: Record<string, EpisodeExtras> = {
   },
   '2026-03-06': {
     cast: [chloe, shaira, nora, sebastian],
-    transcriptPath: '/content/transcripts/spotifyEpisodeIdHere.md',
+    transcriptPath: 'episode2.md', // /content/transcripts/episode2.md
   },
   '2026-03-13': {
     cast: [chloe, shaira, ethan],
