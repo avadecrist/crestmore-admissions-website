@@ -7,9 +7,9 @@ export const episodeExtrasByDate: Record<string, EpisodeExtras> = {
     cast: [chloe, shaira, lauren, nick],
     transcriptPath: '/episode1.md',
   },
-  '2026-03-06': {
+  '2026-03-07': {
     cast: [chloe, shaira, nora, sebastian],
-    transcriptPath: 'episode2.md', // /content/transcripts/episode2.md
+    transcriptPath: '/episode2.md', // /content/transcripts/episode2.md
   },
   '2026-03-13': {
     cast: [chloe, shaira, ethan],
