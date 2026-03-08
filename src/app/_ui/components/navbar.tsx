@@ -41,8 +41,8 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Temp Countdown Timer */}
-        <CountdownTimer expiryTimestamp={SHOW_RELEASE_DATE} variant='small'/>
+        {/* Comment out after 2 episodes are released */}
+        {/* <CountdownTimer expiryTimestamp={SHOW_RELEASE_DATE} variant='small'/> */}
 
         {/* DESKTOP NAV */}
         <div className='hidden items-center gap-6 md:flex'>
