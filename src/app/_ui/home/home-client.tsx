@@ -105,7 +105,6 @@ export default function HomeClient({ episodes }: HomeClientProps) {
           <div className="transition-opacity duration-500">
             { isReleased ? <EpisodesSection episodes={episodes} /> : <TimerSection /> }
           </div>
-          {/* <EpisodesSection episodes={episodes} /> */}
 
         </section>
 
