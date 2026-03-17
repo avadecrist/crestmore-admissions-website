@@ -7,27 +7,27 @@
 
 [0:00]
 
-*(Phone rings.)*
+*(Phone rings.)*  
 
-*(Phone picked up.)*
+*(Phone picked up.)*  
 
-**Shaira (into phone):**
+**Shaira (into phone):**  
 Crestmore Admissions, how can I help you?
 
-*(Beat.)*
+*(Beat.)*  
 
-**Shaira:**
+**Shaira:**  
 Hello?
 
-*(Beat.)*
+*(Beat.)*  
 
-**Shaira:**
+**Shaira:**  
 Hello?
 
-*(Call hang-up tone.)*
+*(Call hang-up tone.)*  
 
-**Shaira:**
-Episode one, *Pilot.*
+**Shaira:**  
+Episode one, *Pilot.*  
 
 ---
 
@@ -35,38 +35,38 @@ Episode one, *Pilot.*
 
 [0:14]
 
-*(Typical office sounds. Door opens.)*
+*(Typical office sounds. Door opens.)*  
 
-**Lucy:**
+**Lucy:**  
 Hey.
 
-**Sam:**
+**Sam:**  
 What are you doing here so early?
 
-**Lucy (whispering):**
+**Lucy (whispering):**  
 Meeting with Sara.
 
-**Sam:**
+**Sam:**  
 No way, same.
 
-**Lucy:**
+**Lucy:**  
 Do you think it's because we were on the phone buying concert tickets off that random guy on the phone?
 
-**Sam:**
+**Sam:**  
 I didn't even think of that. I thought she heard me tell you about my freaky date from last week...
 
-**Lucy:**
+**Lucy:**  
 Well, shit.
 
-*(Door opens. Sara enters.)*
+*(Door opens. Sara enters.)*  
 
-**Sara:**
+**Sara:**  
 Lucy, let’s have a little chat. Shall we?
 
-**Lucy:**
+**Lucy:**  
 Uh, yeah. Sure.
 
-*(Footsteps. Clock ticking as scene transitions.)*
+*(Footsteps. Clock ticking as scene transitions.)*  
 
 ---
 
@@ -74,59 +74,59 @@ Uh, yeah. Sure.
 
 [0:44]
 
-*(Door opens. Footsteps as Lucy returns.)*
+*(Door opens. Footsteps as Lucy returns.)*  
 
-**Sara:**
+**Sara:**  
 I’ll be back for you in a second, Sam.
 
-**Sam:**
+**Sam:**  
 Sounds good!
 
-*(Door shuts.)*
+*(Door shuts.)*  
 
-**Sam (eager):**
+**Sam (eager):**  
 What did she say?!
 
-**Lucy:**
+**Lucy:**  
 She knows we’re slacking off and that you answer all the phones and I do all the emails and interviews.
 
-**Sam:**
+**Sam:**  
 Great.
 
-**Lucy:**
+**Lucy:**  
 So she’s separating us today.
 
-**Sam:**
+**Sam:**  
 No!
 
-**Lucy:**
+**Lucy:**  
 Yes. You’re on emails and interviews and I’m on... phones.
 
-**Sam:**
+**Sam:**  
 Oh god, are you ready for that?
 
-**Lucy:**
+**Lucy:**  
 I don’t think I can do it.
 
-*(Phone rings.)*
+*(Phone rings.)*  
 
-**Lucy:**
+**Lucy:**  
 Oh, shit!
 
-*(Door opens.)*
+*(Door opens.)*  
 
-**Sara:**
+**Sara:**  
 Come on in, Sam.
 
-**Sam (to Lucy):**
+**Sam (to Lucy):**  
 You got this.
 
-**Sam (to Sara):**
+**Sam (to Sara):**  
 Coming!
 
-*(Footsteps. Door shuts.)*
+*(Footsteps. Door shuts.)*  
 
-*(Phone rings again. Lucy answers.)*
+*(Phone rings again. Lucy answers.)*  
 
 ---
 
@@ -134,91 +134,91 @@ Coming!
 
 [1:17]
 
-**Lucy (hesitant):**
+**Lucy (hesitant):**  
 Crestmore University Office of Admission, this is Lucy speaking. How can I help you?
 
-**Ken:**
+**Ken:**  
 Hello, ma’am. I was just calling with a few quick questions. Am I calling the right place?
 
-**Lucy:**
+**Lucy:**  
 Yeah, totally! I’m assuming you have questions about a prospective student?
 
-**Ken:**
+**Ken:**  
 That’s absolutely right. My son just got his acceptance from Crestmore. We are thrilled.
 
-**Lucy:**
+**Lucy:**  
 Oh, well congratulations — to your son! Um, you called the right place. I’d be happy to help you get some answers.
 
-**Ken:**
+**Ken:**  
 Fantastic. I just had some questions about Crestmore’s living situation.
 
-**Lucy:**
+**Lucy:**  
 Sure! Crestmore requires first-year students to live in dorms. All freshmen are split across, uh, two residence halls. And your son will likely have one other roommate.
 
-**Ken:**
+**Ken:**  
 I'm sorry, aren’t there three residence halls? 
 
-*(Papers rustle.)*
+*(Papers rustle.)*  
 
-**Ken:**
+**Ken:**  
 Smith, Wilson, and Miller?
 
-**Lucy (nervous):**
+**Lucy (nervous):**  
 Ah yeah — right. Three dorms.
 
-**Ken:**
+**Ken:**  
 Right, right. And who exactly will my son’s roommate be?
 
-**Lucy:**
+**Lucy:**  
 Great question! 
 
-**Lucy:**
+**Lucy:**  
 Well, roommates are automatically assigned and your son will find out who he's assigned to in-
 
-*(More papers rustling.)*
+*(More papers rustling.)*  
 
-**Lucy:**
+**Lucy:**  
 About a month before school starts.
 
-**Ken:**
+**Ken:**  
 Well how can I get to know a little more about this person?
 
-**Lucy:**
+**Lucy:**  
 I’m not quite sure what you’re asking.
 
-**Ken:**
+**Ken:**  
 Can’t you provide more information? I thought I called the right place.
 
-**Lucy:**
+**Lucy:**  
 Let's see, it says here that your son will receive an email with his roommate’s name and number and they'll be able to get in contact prior to move-in day.
 
-**Ken:**
+**Ken:**  
 So it will be a male?
 
-**Lucy:**
+**Lucy:**  
 Yes — an email.
 
-**Ken:**
+**Ken:**  
 No. A male. As in a man.
 
-**Lucy:**
+**Lucy:**  
 Oh. Well, our halls are co-ed, but your son will share a dorm room with another guy. So yes?
 
-**Ken:**
+**Ken:**  
 Like a real male?
 
-**Lucy:**
+**Lucy:**  
 What?
 
-**Ken:**
+**Ken:**  
 Oh, lord. Nothing.
 
-*(Beat.)*
+*(Beat.)*  
 
-**Ken:**
+**Ken:**  
 Look, I don't know how it's done in your house, but in my house it’s simple. There are men and there are women. Girls and boys. Do you understand what I’m saying?
 
-**Lucy:**
+**Lucy:**  
 Sure. Can I help you with anything else, sir?
 
 ---
@@ -227,93 +227,93 @@ Sure. Can I help you with anything else, sir?
 
 [3:01]
 
-**Ken:**
+**Ken:**  
 Well, yes. How can I get control of what type of roommate my son gets?
 
-**Lucy:**
+**Lucy:**  
 How can you control it?
 
-**Ken (intensifying):**
+**Ken (intensifying):**  
 What process exactly will he go through of getting a roommate?
 
-**Lucy (getting annoyed):**
+**Lucy (getting annoyed):**  
 Good question. Uh, we send out a form so we can better understand your student's living habits, and then we pair people based on that.
 
-**Ken:**
+**Ken:**  
 Right, I was looking over it. Tell me more.
 
-**Lucy:**
+**Lucy:**  
 Great, you're already familiar. As someone who's gone through the process, I’d recommend answering the form in regard to who you are now, not who you want to be when you come to college.
 
-**Lucy (rambling):**
+**Lucy (rambling):**  
 Like freshman year I thought I would start waking up at 8 a.m. but let me tell you, I didn't and my roommate did and-
 
-**Ken:**
+**Ken:**  
 Ma'am, I don’t really care. I’m here to talk about my son.
 
-**Lucy (under her breath):**
+**Lucy (under her breath):**  
 Oh my god.
 
-**Ken:**
+**Ken:**  
 Anyway, I was looking at the courses you offer since my son is undecided and I noticed there is a section about LTBG and all that stuff.
 
-**Lucy:**
+**Lucy:**  
 I think you mean LGBTQ and our Gender Studies degree? What about it?
 
-**Ken:**
+**Ken:**  
 So when it comes to classes, how do I restrict the ones he’s taking?
 
-**Lucy:**
+**Lucy:**  
 Restrict? What do you mean?
 
-**Ken:**
+**Ken:**  
 Are there parental controls for all that?
 
-**Lucy:**
+**Lucy:**  
 Well, since your son will no longer be a minor, his academic records including his classes are confidential. He can pick any classes he wants.
 
-**Ken:**
+**Ken:**  
 Well I’m paying for it! So how can I see what he picks?
 
-**Lucy:**
+**Lucy:**  
 Well he would have to give you his login, which he isn't obligated to do.
 
-**Ken:**
+**Ken:**  
 How about you guys just give it to me now and—
 
-**Lucy:**
+**Lucy:**  
 Sir, we can’t give that to you—
 
-**Ken:**
+**Ken:**  
 Hold on. Let me grab a pen and paper.
 
-*(Door opens. Sam returns.)*
+*(Door opens. Sam returns.)*  
 
-**Sam:**
+**Sam:**  
 How’s it going?
 
-**Lucy (whispering):**
+**Lucy (whispering):**  
 Help. Help. Help.
 
-**Sam:**
+**Sam:**  
 Relax. Tell me what's going on?
 
-**Lucy:**
+**Lucy:**  
 Homophobic control freak. Take it from me. Take it!
 
-**Sam:**
+**Sam:**  
 Oh god...
 
-**Ken:**
+**Ken:**  
 Okay.
 
-**Lucy (whispering):**
+**Lucy (whispering):**  
 Sam, help!
 
-**Sara (off):**
+**Sara (off):**  
 Lucy!
 
-*(Lucy groans)*
+*(Lucy groans)*  
 
 ---
 
@@ -321,95 +321,95 @@ Lucy!
 
 [4:27]
 
-*(Lucy answers up the phone again.)*
+*(Lucy answers up the phone again.)*  
 
-**Lucy (strained):**
+**Lucy (strained):**  
 Hello?
 
-**Ken:**
+**Ken:**  
 I’m ready for that login.
 
-**Lucy:**
+**Lucy:**  
 I can’t give you your son’s login. It’s private information.
 
-**Ken:**
+**Ken:**  
 My son, exactly.
 
-**Lucy:**
+**Lucy:**  
 Like I said, that’s your son's private information. I cannot share it with you.
 
-**Ken:**
+**Ken:**  
 Why did you make me get the damn pen and paper?!
 
-**Lucy:**
+**Lucy:**  
 I didn’t make you get the pen and paper—
 
-**Ken:**
+**Ken:**  
 What is your name?
 
-**Lucy:**
+**Lucy:**  
 Lucy.
 
-**Ken:**
+**Ken:**  
 Spell that for me.
 
-**Lucy:**
+**Lucy:**  
 L-U-C-Y.
 
-*(Pen scribbling aggressively.)*
+*(Pen scribbling aggressively.)*  
 
-**Ken:**
+**Ken:**  
 Now back to the classes, Lucy. I saw that you offer LGTQB studies. Why?
 
-**Lucy:**
+**Lucy:**  
 LGTBQ.
 
-**Ken:**
+**Ken:**  
 Huh?
 
-**Lucy:**
+**Lucy:**  
 We try to offer a diverse education here at Crestmore and we believe that students should be able to study what they’re passionate about.
 
-**Ken:**
+**Ken:**  
 Well I don’t want to pay for that class.
 
-**Lucy:**
+**Lucy:**  
 I can’t control that classes your son enrolls in. I'm going to have to hang up now-
 
-**Ken:**
+**Ken:**  
 I don't want him to take stupid classes like that! What a waste of his time and more importantly, my money!
 
-**Lucy:**
+**Lucy:**  
 That is between you and him.
 
-**Ken:**
+**Ken:**  
 I won't accept that answer.
 
-**Lucy:**
+**Lucy:**  
 I apologize for not being able to help you any further, sir. 
 
-**Ken:**
+**Ken:**  
 Put me on the phone with an adult. Now.
 
-**Lucy:**
+**Lucy:**  
 I am an adult.
 
-**Ken:**
+**Ken:**  
 And I'm gay! Your supervisor. Now.
 
-**Lucy:**
+**Lucy:**  
 Fine. I'm going to have to put you on hold.
 
-**Ken:**
+**Ken:**  
 I'd rather you not.
 
-**Lucy:**
+**Lucy:**  
 Well, sir, I will need to in order to get my superviser.
 
-**Ken:**
+**Ken:**  
 Whatever.
 
-*(Call placed on hold. Light hold music starts.)*
+*(Call placed on hold. Light hold music starts.)*  
 
 ---
 
@@ -417,34 +417,34 @@ Whatever.
 
 [5:33]
 
-**Sam:**
+**Sam:**  
 That all sounds like fun.
 
-**Lucy:**
+**Lucy:**  
 He wants to talk to Sara.
 
-**Sam:**
+**Sam:**  
 You can’t transfer it to Sara, you're already on thin ice.
 
-**Lucy:**
+**Lucy:**  
 You don't get it. Crazy dad. His poor son is probably gay and he’s trying to make sure that he doesn't take any LGTBQ related classes. 
 
-**Lucy:**
+**Lucy:**  
 And he's worried about roommates! Because in his house, and I quote, "There are only girls and boys."
 
-**Sam:**
+**Sam:**  
 Do an accent.
 
-**Lucy:**
+**Lucy:**  
 What?
 
-**Sam:**
+**Sam:**  
 Put on a fucking accent. Pretend you’re Sara. He won't know. He clearly isn't very educated.
 
-**Lucy:**
+**Lucy:**  
 Wait you're so smart.
 
-*(Call taken off hold.)*
+*(Call taken off hold.)*  
 
 ---
 
@@ -452,63 +452,63 @@ Wait you're so smart.
 
 [6:05]
 
-**Lucy (southern accent):**
+**Lucy (southern accent):**  
 Hi! Thanks for your patience. This is Sara. How can I help ya today?
 
-**Ken:**
+**Ken:**  
 Spell that for me.
 
-**Lucy (to herself):**
+**Lucy (to herself):**  
 Oh god.
 
-**Lucy (accent):**
+**Lucy (accent):**  
 S-A-R-A.
 
-*(More pencil scribbling.)*
+*(More pencil scribbling.)*  
 
-**Ken:**
+**Ken:**  
 So, Sara. Your student worker said there was no way I could get into my son's account to pick his classes or his roommates. Is that true?
 
-**Lucy (accent):**
+**Lucy (accent):**  
 That is correct.
 
-**Ken:**
+**Ken:**  
 What can you do about that?
 
-**Lucy (accent):**
+**Lucy (accent):**  
 Nothing. Lucy gave you the correct information.
 
-**Ken:**
+**Ken:**  
 That’s ridiculous!
 
-**Lucy (accent):**
+**Lucy (accent):**  
 I'm afraid, it’s the law.
 
-**Ken:**
+**Ken:**  
 He’s my kid!
 
-**Lucy (losing accent):**
+**Lucy (losing accent):**  
 It’s the law, sir-
 
-**Ken:**
+**Ken:**  
 Who am I speaking with?
 
-**Lucy (losing accent):**
+**Lucy (losing accent):**  
 Uh, Sara! Like I said.
 
-**Ken:**
+**Ken:**  
 Do you think this is a joke?
 
-**Lucy (accent):**
+**Lucy (accent):**  
 Will that be all for today?
 
-**Ken:**
+**Ken:**  
 Put your boss on the phone!
 
-**Lucy:**
+**Lucy:**  
 Have a good day!
 
-*(Click. Call hangs up.)*
+*(Click. Call hangs up.)*  
 
 ---
 
@@ -516,28 +516,28 @@ Have a good day!
 
 [6:45]
 
-**Sam:**
+**Sam:**  
 See? You did great.
 
-**Lucy:**
+**Lucy:**  
 I hung up on him, impersonated our boss, and lied.
 
-**Sam:**
+**Sam:**  
 Maybe not your best work, but-
 
-**Lucy:**
+**Lucy:**  
 I’m never taking a call again.
 
-**Sam:**
+**Sam:**  
 Hey, at least we’re in it together.
 
-**Lucy:**
+**Lucy:**  
 Until Sara fires us. What did she say to you?
 
-**Sam:**
+**Sam:**  
 Where do I even begin?
 
-*(Fade out.)*
+*(Fade out.)*  
 
 ---
 
@@ -545,34 +545,34 @@ Where do I even begin?
 
 [7:02]
 
-*(Soft instrumental or office ambience fades in.)*
+*(Soft instrumental or office ambience fades in.)*  
 
-**Shaira:**
-This episode of *Crestmore Admissions*
+**Shaira:**  
+This episode of *Crestmore Admissions*  
 was written by Shaira Yousuf, directed by Shaira Yousuf, produced by Chloe Avant.
 
-**Ashley:**
+**Ashley:**  
 And edited and sound designed by Ashley Uhrig.
 
-**Chloe:**
+**Chloe:**  
 Thank you to our amazing voice actors.
 
-**Shaira:**
+**Shaira:**  
 Shaira Yousuf as Sam.  
 
-**Chloe:**
+**Chloe:**  
 Chloe Avant as Lucy.  
 
-**Lauren:**
+**Lauren:**  
 Lauren Ferrell as Sara.  
 
-**Nick:**
+**Nick:**  
 And Nick George as Ken.
 
-**Shaira:**
+**Shaira:**  
 For more information and more episodes, follow us on Spotify and Instagram at @CrestmoreAdmissions.
 
-**Chloe & Shaira:**
+**Chloe & Shaira:**  
 Thank you for listening!
 
 *(Call hang-up tone.)*
