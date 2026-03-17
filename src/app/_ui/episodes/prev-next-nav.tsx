@@ -6,6 +6,8 @@
 
 import Link from "next/link";
 import type { EpisodeNavItem } from "@/app/_types/episode";
+import ReactMarkdown from "react-markdown";
+import { getTranscript } from "@/app/_lib/transcripts";
 
 type PrevNextNavProps = {
   transcriptPath?: string | null;
@@ -26,7 +28,9 @@ export default function PrevNextNav({
           <p className="text-sm tracking-wide text-offblack/80">
             VIEW TRANSCRIPT{" "}
             <Link
-              href={transcriptPath}
+              href={`/transcripts/${transcriptPath}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-navy underline underline-offset-4 hover:opacity-80"
             >
               HERE
