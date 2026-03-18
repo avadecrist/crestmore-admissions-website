@@ -482,12 +482,12 @@ Sarah's not gonna like that.
 [05:30–05:58]
 
 **Chloe:**  
-This episode of *Crestmore Admissions* was written by Chloe Avant, directed by Chloe Avant, produced by Chloe Avant, and edited and sound designed by Ashley Urich.
+This episode of *Crestmore Admissions* was written by Chloe Avant, directed by Chloe Avant, produced by Chloe Avant, and edited and sound designed by Ashley Uhrig.
 
 **Shaira:**  
 Thank you to our amazing voice actors.
 
-Shaira Youssef as Sam.
+Shaira Yousuf as Sam.
 
 **Chloe:**  
 Chloe Avant as Lucy.
