@@ -505,18 +505,18 @@ They didn't want a stupid counselor!
 ### OUTRO
 
 **Chloe:**  
-This episode of *Crestmore Admissions* was written by Shaira Youssef, directed by Shaira Youssef, produced by Chloe Avant, and edited and sound designed by Ashley Urich.
+This episode of *Crestmore Admissions* was written by Shaira Yousuf, directed by Shaira Yousuf, produced by Chloe Avant, and edited and sound designed by Ashley Uhrig.
 
 **Shaira:**  
 Thank you to our amazing voice actors.
 
-Shaira Youssef as Sam.
+Shaira Yousuf as Sam.
 
 **Chloe:**  
 Chloe Avant as Lucy.
 
 **Shaira:**  
-And Ethan Schlesinger as Jake.
+And Ethan Schwesinger as Jake.
 
 **Chloe:**  
 For more information and more episodes, follow us on Spotify and Instagram at **Crestmore Admissions**.
